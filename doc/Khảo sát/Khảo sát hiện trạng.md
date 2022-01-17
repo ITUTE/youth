@@ -4,7 +4,8 @@
 
 1. [Youth HCMUTE](#youth-hcmute)
 2. [Tuổi trẻ HCMUTE](#tuoitre-hcmute)
-
+3. [Tuổi trẻ UIT](#tuoitre-uit)
+4. [Kết luận](#summary)
 ## Youth HCMUTE
 
 | Tiêu chí | Mô tả |
@@ -37,3 +38,10 @@
 | Ưu điểm | - Giao diện thân thiện, dễ thao tác. <br /> - Chức năng đáp ứng nghiệp vụ Đoàn - Hội. <br /> - Responsive. |
 | Nhược điểm | Mẫu thiết kế giao diện đơn giản sử dụng Wordpress, không bắt kịp xu thế. |
 | Ảnh | ![tuoitre.uit.edu.vn](./images/tuoitre.uit.edu.vn.jpeg) |
+
+## Summary
+
+Dựa trên những khảo sát thực tế về 3 website nêu trên, ta có thể thấy rằng:
+- Các website phần lớn chưa đáp ứng đủ các nhu cầu thục tiễn trong công tác Đoàn - Hội. 
+- Giao diện website còn nhiều lỗi, chưa responsive.
+- Nhiều trang web đang bỏ dỡ, không được duy trì.
