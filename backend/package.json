@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
   },
   "author": "TienNHM",
   "license": "ISC",
@@ -23,5 +22,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15"
-  }
+  },
+  "devDependencies": {}
 }

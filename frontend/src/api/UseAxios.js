@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-
 axios.defaults.baseURL = process.env.REACT_APP_API_ROOT
 
 export const useAxios = (axiosParams) => {
