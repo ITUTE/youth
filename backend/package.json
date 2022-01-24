@@ -10,9 +10,6 @@
     "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
     "test": "lint-staged"
   },
-  "pre-commit": [
-    "test"
-  ],
   "author": "TienNHM",
   "license": "ISC",
   "dependencies": {
@@ -30,6 +27,6 @@
   },
   "devDependencies": {},
   "lint-staged": {
-    "{frontend,backend}/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write"
+    "/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write"
   }
 }
