@@ -6,9 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "format": "lint-staged",
     "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
-    "test": "lint-staged"
   },
   "author": "TienNHM",
   "license": "ISC",
@@ -25,8 +23,5 @@
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
-  "lint-staged": {
-    "/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write"
-  }
+  "devDependencies": {}
 }
