@@ -6,9 +6,13 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "format": "lint-staged",
     "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lint-staged"
   },
+  "pre-commit": [
+    "test"
+  ],
   "author": "TienNHM",
   "license": "ISC",
   "dependencies": {
@@ -23,5 +27,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {},
+  "lint-staged": {
+    "{frontend,backend}/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write"
   }
 }
