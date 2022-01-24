@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\"",
+    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
   },
   "author": "TienNHM",
   "license": "ISC",
