@@ -27,7 +27,7 @@
     "prettier": "^2.5.1"
   },
   "lint-staged": {
-    "backend/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write"
+    "backend/src/**/*.js": "prettier --tab-width 4 --semi false --single-quote --trailing-comma all --write --allow-empty"
   },
   "dependencies": {}
 }
