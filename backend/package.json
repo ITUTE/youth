@@ -1,27 +1,30 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "Youth ITUTE backend",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
-  },
-  "author": "TienNHM",
-  "license": "ISC",
-  "dependencies": {
-    "argon2": "^0.28.3",
-    "bcryptjs": "^2.4.3",
-    "concurrently": "^6.5.1",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "express-fileupload": "^1.2.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.4",
-    "nodemon": "^2.0.15"
-  },
-  "devDependencies": {}
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Youth ITUTE backend",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js -r esm",
+        "dev": "nodemon index.js -r esm",
+        "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
+    },
+    "author": "TienNHM",
+    "license": "ISC",
+    "dependencies": {
+        "argon2": "^0.28.3",
+        "bcryptjs": "^2.4.3",
+        "concurrently": "^6.5.1",
+        "cors": "^2.8.5",
+        "dotenv": "^14.3.2",
+        "ejs": "^3.1.6",
+        "esm": "^3.2.25",
+        "express": "^4.17.2",
+        "express-fileupload": "^1.2.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.1.4",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.15"
+    },
+    "devDependencies": {}
 }
