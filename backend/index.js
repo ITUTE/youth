@@ -1,44 +1,40 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
+import express from 'express'
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+import cors from 'cors'
+import fileUpload from 'express-fileupload'
 
-const app = express();
-const authRoute = require("./src/routers/authRoutes");
-const fileUpload = require('express-fileupload')
+//import routers
+import authRoute from './src/routes/authRoutes.js'
 
-//Config env
-dotenv.config({ path: "./.env" });
+const app = express()
+const PORT = process.env.PORT || 5001
+const api = '/app/api/v1'
+dotenv.config()
 
-//Config CORS
-const cors = require("cors");
-
-
-var whitelist = [
-    'https://youth-itute.vercel.app',
-    'http://localhost:3000'
-]
-
-var corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1) {
-            callback(null, true)
-        }
-        else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    }
+const whitelist = ['https://youth-itute.vercel.app', 'http://localhost:3000']
+const corsOptions = {
+    origin:
+        app.settings.env === 'development'
+            ? '*'
+            : function (origin, callback) {
+                  if (whitelist.indexOf(origin) !== -1) {
+                      callback(null, true)
+                  } else {
+                      callback(new Error('Not allowed by CORS'))
+                  }
+              },
 }
 
-app.options('*', cors())
-app.use(cors());
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use(fileUpload({
-    useTempFiles: true
-}))
+//use middlewires
+app.use(cors(corsOptions))
+app.use(express.json())
+app.use(
+    fileUpload({
+        useTempFiles: true,
+    }),
+)
 
-//Base url: no slash at the end
-const api = "/app/api/v1";
 //Connect DB
 const connectDB = async () => {
     try {
@@ -48,26 +44,22 @@ const connectDB = async () => {
                 useUnifiedTopology: true,
             })
             .then(() => {
-                console.log(" Mongoose connected ");
-            });
+                console.log(' Mongoose connected ')
+            })
     } catch (error) {
-        console.log("Connect Error :", error.message);
-        process.exit(1);
+        console.log('Connect Error :', error.message)
+        process.exit(1)
     }
-};
+}
+connectDB()
 
-connectDB();
+//set routes
+app.use(`${api}/auth`, authRoute)
 
-/* ---------------------------------- Route --------------------------------- */
-app.use(`${api}/auth`, authRoute);
-
-
-app.get("/", (req, res) => res.send("Youth ITUTE API"));
-
-app.listen(process.env.PORT || 5001, function () {
+app.listen(PORT, function () {
     console.log(
-        "Express server listening on port %d in %s mode",
-        this.address().port,
-        app.settings.env
-    );
-});
+        `Express server listening on port ${this.address().port} in ${
+            app.settings.env
+        } mode`,
+    )
+})
