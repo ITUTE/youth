@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
+import morgan from 'morgan'
 import fileUpload from 'express-fileupload'
 
 //import routers
@@ -27,8 +28,9 @@ const corsOptions = {
 }
 
 //use middlewires
-app.use(cors(corsOptions))
 app.use(express.json())
+app.use(morgan('common'))
+app.use(cors(corsOptions))
 app.use(
     fileUpload({
         useTempFiles: true,
