@@ -13,16 +13,21 @@ const PORT = process.env.PORT || 5001
 const api = '/app/api/v1'
 dotenv.config()
 
-const whitelist = ['https://youth-itute.vercel.app', 'http://localhost:3000']
+const whitelist = [
+    'https://youth-itute.vercel.app',
+    'http://localhost:3000',
+]
 const corsOptions = {
     origin:
         app.settings.env === 'development'
-            ? '*'
+            		? '*'
             : function (origin, callback) {
-                  if (whitelist.indexOf(origin) !== -1) {
+                  		if (whitelist.indexOf(origin) !== -1) {
                       callback(null, true)
                   } else {
-                      callback(new Error('Not allowed by CORS'))
+                      callback(
+                          new Error('Not allowed by CORS'),
+                      )
                   }
               },
 }
@@ -60,8 +65,8 @@ app.use(`${api}/auth`, authRoute)
 
 app.listen(PORT, function () {
     console.log(
-        `Express server listening on port ${this.address().port} in ${
-            app.settings.env
-        } mode`,
+        `Express server listening on port ${
+            this.address().port
+        } in ${app.settings.env} mode`,
     )
 })
