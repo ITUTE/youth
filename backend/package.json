@@ -5,8 +5,8 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "start": "node index.js -r esm",
-        "dev": "nodemon index.js -r esm",
+        "start": "node index.js",
+        "dev": "nodemon index.js",
         "servers": "concurrently \"npm run dev\" \"cd ../frontend && npm run start\""
     },
     "author": "TienNHM",
@@ -18,7 +18,6 @@
         "cors": "^2.8.5",
         "dotenv": "^14.3.2",
         "ejs": "^3.1.6",
-        "esm": "^3.2.25",
         "express": "^4.17.2",
         "express-fileupload": "^1.2.1",
         "helmet": "^5.0.2",
