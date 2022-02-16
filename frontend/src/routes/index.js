@@ -24,7 +24,11 @@ const routes = [
     },
     {
         path: '/about',
-        element: <About />,
+        element: (
+            <Suspense fallback={<h1>Loading</h1>}>
+                <About />,
+            </Suspense>
+        ),
     },
 ]
 export default routes.map((route, index) => (

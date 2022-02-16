@@ -29,7 +29,6 @@ const awardSchema = new mongoose.Schema({
         type: Object,
         required: true,
         Ref: PRIZE,
-        
     },
     _status: {
         type: String,

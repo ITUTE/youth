@@ -25,5 +25,3 @@ export const useAxios = (axiosParams) => {
 
     return { response, error, loading }
 }
-
-//https://dev.to/ms_yogii/useaxios-a-simple-custom-hook-for-calling-apis-using-axios-2dkj#final-code
