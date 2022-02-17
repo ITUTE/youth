@@ -30,8 +30,10 @@ const routes = [
     {
         path: '/about',
         element: <About />,
+        isPrivite: true,
     },
 ]
+
 export default routes.map((route, index) =>
     route.isPrivite ? (
         <Route
