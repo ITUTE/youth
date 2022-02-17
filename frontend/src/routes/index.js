@@ -3,14 +3,8 @@ import { Link, Route } from 'react-router-dom'
 
 import PriviteRouter from './priviteRouter'
 
-// :NOTE fake component
-const Home = () => {
-    return (
-        <h1>
-            Home <Link to="/about">to</Link>
-        </h1>
-    )
-}
+const Login = lazy(() => import('pages/login'))
+const Home = lazy(() => import('pages/home'))
 
 const About = () => {
     return <h1>About</h1>
@@ -24,14 +18,20 @@ const About = () => {
 // }
 const routes = [
     {
+        path: '/about',
+        element: <About />,
+        isPrivite: true,
+    },
+    {
+        path: '/login',
+        element: <Login />,
+    },
+    {
         path: '/',
         element: <Home />,
     },
-    {
-        path: '/about',
-        element: <About />,
-    },
 ]
+
 export default routes.map((route, index) =>
     route.isPrivite ? (
         <Route

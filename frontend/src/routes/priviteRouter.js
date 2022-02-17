@@ -4,6 +4,7 @@ import { useGoogleAuth } from '../hooks/useGoogleAuth'
 
 const PriviteRouter = ({ element }) => {
     const [isLoading, setIsLoading] = useState(true)
+    console.log(useGoogleAuth())
     const { isSignedIn, isInitialized } = useGoogleAuth()
 
     useEffect(() => {

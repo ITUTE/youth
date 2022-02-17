@@ -15,6 +15,4 @@ export const GoogleAuthProvider = ({ children }) => {
     )
 }
 
-export const useGoogleAuth = () => {
-    React.useContext(GoogleAuthContext)
-}
+export const useGoogleAuth = () => React.useContext(GoogleAuthContext)
