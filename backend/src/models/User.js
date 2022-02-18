@@ -1,16 +1,10 @@
 import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema({
-    username: {
+    email: {
         type: String,
         required: true,
-        min: 4,
-        max: 20,
         unique: true,
-    },
-    password: {
-        type: String,
-        required: true,
     },
     fullname: {
         type: String,
@@ -28,9 +22,10 @@ const UserSchema = new mongoose.Schema({
     },
     _status: {
         type: String,
+        default: 'NORMAL',
         enum: ['NORMAL', 'DEACTIVE'],
     },
 })
 
-const User = mongoose.modle('User', UserSchema)
+const User = mongoose.model('User', UserSchema)
 export default User
