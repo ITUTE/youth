@@ -1,56 +1,72 @@
-.header{
+.header > nav {
+    background-color: #58aef6;
+}
 
-    display: flex;
-    height: 5.625rem;
-    justify-content: space-evenly;
-    align-items: center;
-    background: rgba(88, 174, 246, 1);
-
-    font-family: Sarabun;
-     font-style: normal;
+.navItem {
+    & + & {
+        margin-left: 1rem;
+    }
+    & > * {
+        color: #ecf6fd;
+    }
 }
-.homePage{
-  
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 31px;
-    color: #ECF6FD;
-    cursor: pointer;
-}
-.search{
-    display:flex;
-    position: relative;
-    width: 278.4px;
-    background: #ECF6FD;
-    border-radius: 24px;
-    box-sizing: border-box;
-}
-.iconSearch{
-    display: inline-block;
-    position: absolute;
-    top: 20%;
-    left: 4.6%;
-}
-.input{
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 18px;
-    // color: #A0A0B3;
-    color: #000;
+.inputsearch {
+    background-color: #fff;
+    border-radius: 0.625rem;
     border: none;
-    outline: none;
-    padding: 6px 0px 6px 40px;
-    left: 174.3px;
-    top: 42px;
-    flex: 1;
-    background: #ECF6FD;
-    border-radius: 24px;
-    box-sizing: border-box;
+    padding: 0.4rem 1rem;
+    font-size: small;
 }
-.container{
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 25px;
-    color: #ECF6FD; 
-    cursor: pointer;
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    position: relative;
+    background-image: url('../../../assets/header.png');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 7.25rem;
+    .left {
+        width: 50%;
+        & > h1 {
+            font-weight: bold;
+            color: #191f37;
+            font-size: 4rem;
+        }
+        & > h2 {
+            font-weight: 600;
+            color: #204b9e;
+            font-size: 1.5rem;
+            max-width: 30rem;
+        }
+    }
+    .right {
+        width: 50%;
+        .bannerItem {
+            height: 16rem;
+        }
+    }
+    .bottom {
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-shadow: -4px 4px 10px 1.5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        display: flex;
+        &-left {
+            padding: 2rem;
+            background: #58aef6;
+            height: 100%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+    }
 }

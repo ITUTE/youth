@@ -1,0 +1,36 @@
+.container {
+    padding: 0 6.25rem;
+    padding-left: 8.5rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 6.25rem;
+        top: 0.5rem;
+        height: 100%;
+        border-left: 0.3rem dashed #97d5fe;
+    }
+}
+
+.news {
+    &__card {
+        width: fill;
+        margin-bottom: 1.375rem;
+        border-radius: 0.625rem;
+        background-color: #ecf6fd;
+        &-image {
+            border-radius: 0.625rem 0 0 0.625rem;
+        }
+        &-body {
+            height: fill;
+            & > h5 {
+                color: #191f37;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            & > p {
+                color: #204b9e;
+            }
+        }
+    }
+}
