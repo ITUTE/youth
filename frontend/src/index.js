@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import store from 'data/store'
 import './index.scss'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import { GoogleAuthProvider } from './hooks/useGoogleAuth'
 
 ReactDOM.render(
