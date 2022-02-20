@@ -5,16 +5,21 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import morgan from 'morgan'
 import fileUpload from 'express-fileupload'
+import helmet from 'helmet'
 
-//import routers
-import authRoute from './src/routes/authRoutes.js'
+// Import routers
+import authRouter from './src/routes/authRoutes.js'
 
 const app = express()
 const PORT = process.env.PORT || 5001
 const api = '/app/api/v1'
 dotenv.config()
 
-const whitelist = ['https://youth-itute.vercel.app', 'http://localhost:3000']
+const whitelist = [
+    'https://youth-itute.vercel.app',
+    'http://localhost:3000',
+]
+
 const corsOptions = {
     origin:
         app.settings.env === 'development'
@@ -23,13 +28,15 @@ const corsOptions = {
                   if (whitelist.indexOf(origin) !== -1) {
                       callback(null, true)
                   } else {
-                      callback(new Error('Not allowed by CORS'))
+                      callback(
+                          new Error('Not allowed by CORS'),
+                      )
                   }
               },
 }
 
-//use middlewires
-app.use(express.json())
+// Use middlewires
+app.use(helmet())
 app.use(morgan('common'))
 app.use(cors(corsOptions))
 app.use(
@@ -37,8 +44,9 @@ app.use(
         useTempFiles: true,
     }),
 )
+app.use(express.json())
 
-//Connect DB
+// Connect DB
 const connectDB = async () => {
     try {
         await mongoose
@@ -56,14 +64,15 @@ const connectDB = async () => {
 }
 connectDB()
 
-//set routes
-app.use(`${api}/auth`, authRoute)
+// Set routes
+app.use(`${api}`, authRouter)
 
+// listten port
 app.listen(PORT, function () {
     console.log(
-        `Express server listening on port ${this.address().port} in ${
-            app.settings.env
-        } mode`,
+        `Express server listening on port ${
+            this.address().port
+        } in ${app.settings.env} mode`,
     )
 })
 
