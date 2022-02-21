@@ -1,4 +1,72 @@
-.test { 
-    color: red;
-    background: green;
+.header > nav {
+    background-color: #58aef6;
+}
+
+.navItem {
+    & + & {
+        margin-left: 1rem;
+    }
+    & > * {
+        color: #ecf6fd;
+    }
+}
+.inputsearch {
+    background-color: #fff;
+    border-radius: 0.625rem;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-size: small;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-self: start;
+    position: relative;
+    background-image: url('../../../assets/header.png');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 7.25rem;
+    .left {
+        width: 50%;
+        & > h1 {
+            font-weight: bold;
+            color: #191f37;
+            font-size: 4rem;
+        }
+        & > h2 {
+            font-weight: 600;
+            color: #204b9e;
+            font-size: 1.5rem;
+            max-width: 30rem;
+        }
+    }
+    .right {
+        width: 50%;
+        .bannerItem {
+            height: 16rem;
+        }
+    }
+    .bottom {
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-shadow: -4px 4px 10px 1.5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        display: flex;
+        &-left {
+            padding: 2rem;
+            background: #58aef6;
+            height: 100%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+    }
 }

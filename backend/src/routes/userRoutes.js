@@ -1,9 +1,8 @@
 const express = require('express')
+import { getUser } from '../controllers/userController.js'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('test user')
-})
+router.get('/', getUser)
 
 export default router
