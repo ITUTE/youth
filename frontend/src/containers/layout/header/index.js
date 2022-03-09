@@ -82,7 +82,7 @@ export default function App() {
             <MDBNavbar sticky expand="lg" className="d-flex ">
                 <MDBContainer fluid>
                     <MDBNavbarBrand className="font-weight-bold" href="#">
-                        YOUTH FIT
+                        YOUTH ITUTE
                     </MDBNavbarBrand>
 
                     <MDBNavbarToggler
@@ -101,8 +101,11 @@ export default function App() {
                             placeholder="Tìm kiếm..."
                         />
                         <MDBNavbarNav className="mr-auto mb-2 mb-lg-0 align-items-center justify-content-end">
-                            {navigator.map((nav) => (
-                                <MDBNavbarItem className={styles.navItem}>
+                            {navigator.map((nav, index) => (
+                                <MDBNavbarItem
+                                    key={index}
+                                    className={styles.navItem}
+                                >
                                     <Link to={nav.to}>{nav.text}</Link>
                                 </MDBNavbarItem>
                             ))}
@@ -110,44 +113,6 @@ export default function App() {
                     </MDBCollapse>
                 </MDBContainer>
             </MDBNavbar>
-            <div className={clsx(styles.banner)}>
-                <div className={styles.left}>
-                    <h1>
-                        ĐOÀN THANH NIÊN <br />
-                        HỘI SINH VIÊN
-                    </h1>
-                    <h2>
-                        KHOA CÔNG NGHỆ THÔNG TIN - TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ
-                        THUẬT THÀNH PHỐ HỒ CHÍ MINH
-                    </h2>
-                </div>
-                <div className={clsx(styles.right)}>
-                    <MDBCarousel showIndicators showControls fade>
-                        <MDBCarouselInner className="rounded-2 ">
-                            {homeSliders.map((item, index) => (
-                                <MDBCarouselItem
-                                    className={clsx(styles.bannerItem, {
-                                        active: index === 0,
-                                    })}
-                                    key={index}
-                                >
-                                    <MDBCarouselElement
-                                        src={item.imgUrl}
-                                        alt={item.title}
-                                    />
-                                    <MDBCarouselCaption>
-                                        <h5>{item.title}</h5>
-                                    </MDBCarouselCaption>
-                                </MDBCarouselItem>
-                            ))}
-                        </MDBCarouselInner>
-                    </MDBCarousel>
-                </div>
-                <div className={styles.bottom}>
-                    <div className={styles['bottom-left']}>SỰ KẾT HỢP CỦA</div>
-                    <div className={styles['bottom-right']}></div>
-                </div>
-            </div>
         </header>
     )
 >>>>>>> 0b8f918c3c5ff697461281dd8d6cfd84e2a61c27
