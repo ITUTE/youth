@@ -35,7 +35,6 @@ export default function Form() {
         className={styles.input}
         onChange={handleInputId}
       ></input>
-      <br></br>
       <label className={styles.label}>
         Mật khẩu
       </label>
@@ -47,7 +46,6 @@ export default function Form() {
         className={styles.input}
         onChange={handleInputPassword}
       ></input>
-      <br></br>
       <button className={styles.submitBtn} onClick={handleLoginBtn}>
         Đăng nhập
       </button>
