@@ -1,6 +1,11 @@
 import mongoose from 'mongoose'
 
 const UserSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
     email: {
         type: String,
         required: true,
@@ -8,12 +13,11 @@ const UserSchema = new mongoose.Schema({
     },
     fullname: {
         type: String,
-        min: 4,
         required: true,
-        unique: true,
     },
     position: {
         type: Array,
+        //'CTV' 'BCH'
         default: ['CTV'],
     },
     avatar: {

@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 export default function Login() {
   return (
     <Provider store={store}>
-      <div className={styles.container}>
         <div className={styles.loginFormContainer}>
           <div className={styles.loginForm}>
             <span className={styles.items}>Đăng nhập</span>
@@ -30,7 +29,6 @@ export default function Login() {
             <img src={banner} alt="banner"></img>
           </div>
         </div>
-      </div>
     </Provider>
   );
 }
