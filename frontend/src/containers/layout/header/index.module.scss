@@ -1,0 +1,20 @@
+.header > nav {
+    background-color: #58aef6;
+}
+
+.navItem {
+    & + & {
+        margin-left: 1rem;
+    }
+    & > * {
+        color: #ecf6fd;
+    }
+}
+.inputsearch {
+    background-color: #fff;
+    border-radius: 0.625rem;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-size: small;
+}
+

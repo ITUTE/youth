@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        align-self: flex-start;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -2.1rem;
+            transform: translate(-50%, -50%);
+            height: 2.875rem;
+            background-color: #97d5fe;
+            width: 2.875rem;
+            border-radius: 50%;
+        }
+    }
+    &__btn {
+        height: fit-content;
+        color: #97d5fe;
+        border-color: #97d5fe;
+    }
+}
