@@ -1,13 +1,12 @@
 import React from 'react'
-//import Sidebar from './sidebar'
+import SideBar from './sidebar/index'
 //import Body from './body'
 import styles from './index.module.scss'
 
 function Office() {
     return (
         <div className={styles.container}>
-            <div className="left">left</div>
-            <div className="right">right</div>
+            <SideBar />
         </div>
     )
 }
