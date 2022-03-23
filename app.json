@@ -1,0 +1,7 @@
+{
+    "name": "Youth ITUTE",
+    "description": "Văn phòng điện tử Đoàn - Hội khoa Công nghệ Thông tin, trường ĐH Sư phạm Kỹ thuật TPHCM",
+    "repository": "https://github.com/ITUTE/youth",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node", "express", "static"]
+  }
