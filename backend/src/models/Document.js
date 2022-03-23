@@ -27,7 +27,7 @@ const documentSchema = new mongoose.Schema({
     },
     _status: {
         type: String,
-        enum: ['PUBLIC', 'ARCHIVED'],
+        enum: ['PUBLIC', 'PRIVATE', 'SECRET'],
     },
 })
 

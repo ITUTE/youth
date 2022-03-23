@@ -1,10 +1,12 @@
+import Page404 from 'pages/Page404'
 import { lazy, Suspense } from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import PriviteRouter from './priviteRouter'
 
 const Login = lazy(() => import('pages/login'))
 const Home = lazy(() => import('pages/home'))
+const Office = lazy(() => import('pages/office'))
 
 const About = () => {
     return <h1>About</h1>
@@ -18,6 +20,10 @@ const About = () => {
 // }
 const routes = [
     {
+        path: '/office',
+        element: <Office />,
+    },
+    {
         path: '/about',
         element: <About />,
         isPrivite: true,
@@ -29,6 +35,10 @@ const routes = [
     {
         path: '/',
         element: <Home />,
+    },
+    {
+        path: '*',
+        element: <Page404 />,
     },
 ]
 
