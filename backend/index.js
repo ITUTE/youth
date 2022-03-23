@@ -18,6 +18,7 @@ dotenv.config()
 const whitelist = [
     'https://youth-itute.vercel.app',
     'http://localhost:3000',
+    'http://youth-itute.herokuapp.com/'
 ]
 
 const corsOptions = {
