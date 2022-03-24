@@ -11,7 +11,7 @@ const Page404 = () => {
                             <div className="float-start display-3 me-4 d-flex justify-content-center">
                                 <h1 className="display-1 fw-bolder text-danger"
                                     style={{ fontSize: '5rem' }}>
-                                    404
+                                    Opps
                                 </h1>
                                 <h1 className="ps-4 pt-4 text-warning"
                                     style={{ fontSize: '3rem' }}>
@@ -19,14 +19,14 @@ const Page404 = () => {
                                 </h1>
                             </div>
 
-                            <div>
-                                <Image align="center"
-                                    src={process.env.PUBLIC_URL + '/assets/images/empty.svg'}
+                            <div align="center">
+                                <Image
+                                    src={process.env.PUBLIC_URL + '/assets/images/404.svg'}
                                     width={300} height={300}
                                 />
                             </div>
 
-                            <h6 className="pt-4 text-success" style={{ fontSize: '1.5rem' }}>
+                            <h6 align="center" className="pt-4 text-success" style={{ fontSize: '1.5rem' }}>
                                 Không tìm thấy tài nguyên. Vui lòng quay lại sau!
                             </h6>
                         </span>

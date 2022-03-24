@@ -1,4 +1,6 @@
 import Page404 from 'pages/Page404'
+import Support from 'pages/support'
+import SV5T from 'pages/sv5t'
 import { lazy, Suspense } from 'react'
 import { Route } from 'react-router-dom'
 
@@ -22,6 +24,14 @@ const routes = [
     {
         path: '/office',
         element: <Office />,
+    },
+    {
+        path: '/SV5T',
+        element: <SV5T />,
+    },
+    {
+        path: '/support',
+        element: <Support />,
     },
     {
         path: '/about',

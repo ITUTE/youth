@@ -1,6 +1,6 @@
 .container {
     padding: 0 6.25rem;
-    padding-left: 8.5rem;
+    padding-left: 8.5rem !important;
     position: relative;
 	padding-top: 30rem;
     &::after {
@@ -80,7 +80,7 @@
             font-weight: 600;
             overflow: hidden;
             white-space: nowrap;
-            color: #fff;
+            color: rgb(3, 26, 70);
             text-align: center;
         }
         & > img {
