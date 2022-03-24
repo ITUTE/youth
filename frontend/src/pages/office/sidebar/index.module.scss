@@ -139,6 +139,7 @@
 .button_close {
     margin-left: 2.375rem + 21.875rem;
     opacity: 0;
+    z-index: -1;
 }
 .button_open {
     opacity: 1;
