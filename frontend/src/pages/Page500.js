@@ -11,7 +11,7 @@ const Page500 = () => {
                             <div className="float-start display-3 me-4 d-flex justify-content-center">
                                 <h1 className="display-1 text-danger fw-bolder"
                                     style={{ fontSize: '5rem' }}>
-                                    500
+                                    Opps
                                 </h1>
                                 <h1 className="h1 ps-4 pt-4 text-warning"
                                     style={{ fontSize: '3rem' }}>
@@ -19,14 +19,14 @@ const Page500 = () => {
                                 </h1>
                             </div>
 
-                            <div>
-                                <Image align="center"
-                                    src={process.env.PUBLIC_URL + '/assets/images/opps.svg'}
+                            <div align="center">
+                                <Image
+                                    src={process.env.PUBLIC_URL + '/assets/images/500.svg'}
                                     width={300} height={300}
                                 />
                             </div>
 
-                            <h6 className="pt-4 text-success"
+                            <h6 align="center" className="pt-4 text-success"
                                 style={{ fontSize: '1.5rem' }}>
                                 Trang bạn yêu cầu tạm thời không truy cập được. Vui lòng quay lại sau!
                             </h6>
