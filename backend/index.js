@@ -1,4 +1,5 @@
 import express from 'express'
+
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import cors from 'cors'
@@ -17,6 +18,7 @@ dotenv.config()
 const whitelist = [
     'https://youth-itute.vercel.app',
     'http://localhost:3000',
+    'http://youth-itute.herokuapp.com/'
 ]
 
 const corsOptions = {
@@ -74,3 +76,4 @@ app.listen(PORT, function () {
         } in ${app.settings.env} mode`,
     )
 })
+
