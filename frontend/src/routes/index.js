@@ -1,3 +1,4 @@
+import OfficeDocument from 'pages/office/officeDocument'
 import Page404 from 'pages/Page404'
 import Support from 'pages/support'
 import SV5T from 'pages/sv5t'
@@ -24,6 +25,10 @@ const routes = [
     {
         path: '/office',
         element: <Office />,
+    },
+    {
+        path: '/office/vanban',
+        element: <OfficeDocument />,
     },
     {
         path: '/SV5T',
