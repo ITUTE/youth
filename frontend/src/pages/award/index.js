@@ -163,80 +163,44 @@ export default function Award() {
 
     const homeSliders_DVUT = [
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648228476/2021-2022/ICPC%202021/Anh_ICPC-2021_zbpafy.jpg',
-            title: 'ICPC 2021',
-            content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        },
-        {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648147033/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/Tuyen_duong_SV5T_oepslz.jpg',
-            title: 'SV5T',
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236493/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/DVUT_2021_tgjadj.jpg',
+            title: 'Đoàn viên ưu tú 2021 - 2022',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
     ]
 
-    const DVUT_2020_2021 = [
+    const DVUT_2021_2022 = [
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648229638/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/SV5T_-_2020_2021_esdmu8.png',
-            title: 'SINH VIÊN 5 TỐT NĂM HỌC 2020-2021',
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236450/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/DVUT_tcf2ls.jpg',
+            title: 'Đoàn viên ưu tú 2020-2021',
             content:
                 '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
-        }
-    ]
-
-    const awards_DVUT_2020_2021 = [
-        [
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/HTTV_qjecjb.jpg',
-                title: 'Huỳnh Thị Thúy Vy',
-                sid: '18110400'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/PTD_jygwwy.jpg',
-                title: 'Phan Thành Đạt',
-                sid: '18133006'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/VHKD_jajpsr.jpg',
-                title: 'Võ Hoàng Khả Diệu',
-                sid: '19133014'
-            },
-        ],
-        [
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227906/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/NHMT_ozsuq0.jpg',
-                title: 'Nguyễn Huỳnh Minh Tiến',
-                sid: '18110377'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227905/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/NTT_bqcu1x.jpg',
-                title: 'Nguyễn Trung Tín',
-                sid: '18110381'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/DTL_nuajg4.jpg',
-                title: 'Diệp Tấn Luân',
-                sid: '19110055'
-            },
-        ],
-        [
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/HHH_fyuegh.jpg',
-                title: 'Hồ Huy Hoàng',
-                sid: '18110284'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/NDS_wbprc4.jpg',
-                title: 'Nguyễn Đức Sáng',
-                sid: '19110448'
-            },
-            {
-                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227905/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/NTP_aiase9.jpg',
-                title: 'Nguyễn Trần Phúc',
-                sid: '18110339'
-            },
-        ],
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236493/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/DVUT_2021_tgjadj.jpg',
+            title: 'Đoàn viên ưu tú 2020-2021',
+            content:
+                '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236590/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/DVUT___jsrwz3.jpg',
+            title: 'Đoàn viên ưu tú 2020-2021',
+            content:
+                '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236634/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/DVUT_2_ehhhz6.jpg',
+            title: 'Đoàn viên ưu tú 2020-2021',
+            content:
+                '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648236537/2021-2022/%C4%90o%C3%A0n%20vi%C3%AAn%20%C6%B0u%20t%C3%BA/KD_DVUT_kwgs5z.jpg',
+            title: 'Đoàn viên ưu tú 2020-2021',
+            content:
+                '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
+        },
     ]
 
     const homeSliders_TNTT = [
@@ -606,7 +570,7 @@ export default function Award() {
                     <div className={clsx(styles.right)}>
                         <MDBCarousel showIndicators showControls fade>
                             <MDBCarouselInner className="rounded-2 ">
-                                {homeSliders_SV5T.map((item, index) => (
+                                {homeSliders_DVUT.map((item, index) => (
                                     <MDBCarouselItem
                                         className={clsx(styles.bannerItem, {
                                             active: index === 0,
@@ -630,158 +594,37 @@ export default function Award() {
                         <div className={styles['bottom-right']}>ĐOÀN VIÊN ƯU TÚ</div>
                     </div>
                 </div>
-                {/* 2020 - 2021 */}
-                <div className={clsx('d-flex flex-column', styles.news)}>
-                    <SessionHeader title="2020 - 2021" />
-
-                    {SV5T_2020_2021.map((item, index) => (
-                        <MDBCard key={index} className={styles.news__card}>
-                            <MDBRow className="g-0">
-                                <MDBCol md="4">
-                                    <MDBCardImage
-                                        src={item.imgUrl}
-                                        alt="..."
-                                        fluid
-                                        className={styles['news__card-image']}
-                                    />
-                                </MDBCol>
-                                <MDBCol md="8">
-                                    <MDBCardBody
-                                        className={styles['news__card-body']}
-                                    >
-                                        <MDBCardTitle>{item.title}</MDBCardTitle>
-                                        <MDBCardText>{item.content}</MDBCardText>
-                                        <MDBCardText>
-                                            <small className="text-muted">
-                                                Last updated 5 days ago
-                                            </small>
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCol>
-                            </MDBRow>
-                        </MDBCard>
-                    ))}
-                </div>
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
-                >
-                    <MDBCarousel
-                        showIndicators
-                        showControls
-                        className={styles.currEvent__body}
-                    >
-                        <MDBCarouselInner>
-                            {awards_SV5T_2020_2021.map((item, index) => (
-                                <MDBCarouselItem
-                                    className={clsx({
-                                        active: index === 0,
-                                    })}
-                                >
-                                    <div className={styles['card-group']}>
-                                        {item.map((student, i) => (
-                                            <MDBCard
-                                                key={i}
-                                                className={
-                                                    styles['card-group__item']
-                                                }
-                                            >
-                                                <MDBCardImage
-                                                    src={student.imgUrl}
-                                                    position="top"
-                                                    alt="..."
-                                                />
-                                                <MDBCardBody>
-                                                    {/* <MDBCardTitle>{student.title}</MDBCardTitle> */}
-                                                    <a href="https://fb.com/DoanHoiITUTE">Chi tiết</a>
-                                                    {/* <MDBCardText>{student.sid}</MDBCardText> */}
-                                                    {/* <MDBBtn href="#">Chi tiết</MDBBtn> */}
-                                                </MDBCardBody>
-                                            </MDBCard>
-                                        ))}
-                                    </div>
-                                </MDBCarouselItem>
-                            ))}
-                        </MDBCarouselInner>
-                    </MDBCarousel>
-                </div>
-
                 {/* 2021 - 2022 */}
-                <div className={clsx('d-flex flex-column', styles.news)}>
-                    <SessionHeader title="2021 - 2022" />
-
-                    {SV5T_2020_2021.map((item, index) => (
-                        <MDBCard key={index} className={styles.news__card}>
-                            <MDBRow className="g-0">
-                                <MDBCol md="4">
-                                    <MDBCardImage
-                                        src={item.imgUrl}
-                                        alt="..."
-                                        fluid
-                                        className={styles['news__card-image']}
-                                    />
-                                </MDBCol>
-                                <MDBCol md="8">
-                                    <MDBCardBody
-                                        className={styles['news__card-body']}
-                                    >
-                                        <MDBCardTitle>{item.title}</MDBCardTitle>
-                                        <MDBCardText>{item.content}</MDBCardText>
-                                        <MDBCardText>
-                                            <small className="text-muted">
-                                                Last updated 6 days ago
-                                            </small>
-                                        </MDBCardText>
-                                    </MDBCardBody>
-                                </MDBCol>
-                            </MDBRow>
-                        </MDBCard>
-                    ))}
-                </div>
                 <div
                     className={clsx(
                         'd-flex flex-column',
-                        styles.bluebg,
                         styles.currEvent,
+                        styles.bluebg,
                     )}
                 >
-                    <MDBCarousel
-                        showIndicators
-                        showControls
-                        className={styles.currEvent__body}
-                    >
+                    <SessionHeader title="2021 - 2022" />
+                    <MDBCarousel showControls className={styles.currEvent__body}>
                         <MDBCarouselInner>
-                            {awards_SV5T_2020_2021.map((item, index) => (
+                            {DVUT_2021_2022.map((item, index) => (
                                 <MDBCarouselItem
                                     className={clsx({
                                         active: index === 0,
                                     })}
                                 >
-                                    <div className={styles['card-group']}>
-                                        {item.map((student, i) => (
-                                            <MDBCard
-                                                key={i}
-                                                className={
-                                                    styles['card-group__item']
-                                                }
-                                            >
-                                                <MDBCardImage
-                                                    src={student.imgUrl}
-                                                    position="top"
-                                                    alt="..."
-                                                />
-                                                <MDBCardBody>
-                                                    {/* <MDBCardTitle>{student.title}</MDBCardTitle> */}
-                                                    <a href="https://fb.com/DoanHoiITUTE">Chi tiết</a>
-                                                    {/* <MDBCardText>{student.sid}</MDBCardText> */}
-                                                    {/* <MDBBtn href="#">Chi tiết</MDBBtn> */}
-                                                </MDBCardBody>
-                                            </MDBCard>
-                                        ))}
-                                    </div>
+                                    <MDBCarouselElement
+                                        className={styles['currEvent__body-img']}
+                                        src={item.imgUrl}
+                                        alt={item.title}
+                                    />
+                                    <MDBCarouselCaption>
+                                        <span
+                                            className={
+                                                styles['currEvent__body-caption']
+                                            }
+                                        >
+                                            {item.title}
+                                        </span>
+                                    </MDBCarouselCaption>
                                 </MDBCarouselItem>
                             ))}
                         </MDBCarouselInner>
