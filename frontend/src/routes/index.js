@@ -1,3 +1,4 @@
+import Award from 'pages/award'
 import OfficeDocument from 'pages/office/officeDocument'
 import Page404 from 'pages/Page404'
 import Support from 'pages/support'
@@ -33,6 +34,10 @@ const routes = [
     {
         path: '/SV5T',
         element: <SV5T />,
+    },
+    {
+        path: '/award',
+        element: <Award />,
     },
     {
         path: '/support',

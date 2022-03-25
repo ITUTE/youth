@@ -44,7 +44,7 @@ export default function App() {
         },
         {
             text: 'Vinh danh',
-            to: '/honors',
+            to: '/award',
         },
         {
             text: 'Về chúng tôi',
