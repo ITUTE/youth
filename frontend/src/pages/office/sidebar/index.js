@@ -17,7 +17,7 @@ export default class SideBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menu: false,
+            menu: true,
         };
         this.toggleMenu = this.toggleMenu.bind(this);
         this.wrapperRef = createRef();
@@ -29,12 +29,12 @@ export default class SideBar extends Component {
         // important
         document.removeEventListener('click', this.handleClick)
     }
-    handleClick = (event) => {
-        const { target } = event
-        if (!this.wrapperRef.current.contains(target)) {
-            this.setState({ menu: false})
-        }
-    }
+    // handleClick = (event) => {
+    //     const { target } = event
+    //     if (!this.wrapperRef.current.contains(target)) {
+    //         this.setState({ menu: false})
+    //     }
+    // }
     toggleMenu(){
         this.setState({ menu: !this.state.menu })
     }
@@ -43,11 +43,11 @@ export default class SideBar extends Component {
     const show = (this.state.menu) ? "show" : "" ;
     return (
         <div className={styles.wrapper} ref={this.wrapperRef}>
-            <button type="button" className={show?(styles.menu + " " + styles.button_close) : (styles.menu + " " + styles.button_open)} onClick={this.toggleMenu}>
+            {/* <button type="button" className={show?(styles.menu + " " + styles.button_close) : (styles.menu + " " + styles.button_open)} onClick={this.toggleMenu}>
                 <span className={styles.top}></span>
                 <span className={styles.middle}></span>
                 <span className={styles.bottom}></span>
-            </button>
+            </button> */}
             <div className={styles.sidebar + ' ' + show} style={show?{width:"350px"}:{width:'0px'}}>
                 <img src={YITIcon} alt="YIT"></img>
                 <div className={styles.linkWrapper}>
