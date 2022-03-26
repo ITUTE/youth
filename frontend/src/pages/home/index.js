@@ -197,7 +197,7 @@ export default function Home() {
                     </MDBCarousel>
                 </div>
                 <div className={styles.bottom}>
-                    <div className={styles['bottom-left']}>SỰ KẾT HỢP CỦA</div>
+                    <div className={styles['bottom-left']}></div>
                     <div className={styles['bottom-right']}></div>
                 </div>
             </div>
