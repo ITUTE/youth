@@ -81,7 +81,7 @@ export default function App() {
         <header className={styles.header}>
             <MDBNavbar sticky expand="lg" className="d-flex ">
                 <MDBContainer fluid>
-                    <MDBNavbarBrand className="font-weight-bold" href="#">
+                    <MDBNavbarBrand className="font-weight-bold" href="/">
                         YOUTH ITUTE
                     </MDBNavbarBrand>
 
