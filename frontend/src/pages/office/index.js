@@ -1,13 +1,10 @@
 import React from 'react'
-import SideBar from './sidebar/index'
-//import Body from './body'
-import styles from './index.module.scss'
+import './office.scss';
+import  { Navigate } from 'react-router-dom'
 
 function Office() {
     return (
-        <div className={styles.container}>
-            <SideBar />
-        </div>
+        <Navigate to="/office/vanban" />
     )
 }
 
