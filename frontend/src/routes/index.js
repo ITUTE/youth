@@ -1,3 +1,4 @@
+import About from 'pages/about'
 import Award from 'pages/award'
 import OfficeDocument from 'pages/office/officeDocument'
 import OfficeTemplate from 'pages/office/officeTemplate'
@@ -13,9 +14,6 @@ const Login = lazy(() => import('pages/login'))
 const Home = lazy(() => import('pages/home'))
 const Office = lazy(() => import('pages/office'))
 
-const About = () => {
-    return <h1>About</h1>
-}
 // :NOTE fake component
 
 // {
@@ -51,7 +49,6 @@ const routes = [
     {
         path: '/about',
         element: <About />,
-        isPrivite: true,
     },
     {
         path: '/login',
