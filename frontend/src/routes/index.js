@@ -1,5 +1,6 @@
 import Award from 'pages/award'
 import OfficeDocument from 'pages/office/officeDocument'
+import OfficeTemplate from 'pages/office/officeTemplate'
 import Page404 from 'pages/Page404'
 import Support from 'pages/support'
 import SV5T from 'pages/sv5t'
@@ -30,6 +31,10 @@ const routes = [
     {
         path: '/office/vanban',
         element: <OfficeDocument />,
+    },
+    {
+        path: '/office/bieumau',
+        element: <OfficeTemplate />,
     },
     {
         path: '/SV5T',

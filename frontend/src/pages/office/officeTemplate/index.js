@@ -3,21 +3,21 @@ import SideBar from '../sidebar'
 //import Body from './body'
 import styles from '../index.module.scss'
 import OfficeBreadcrumb from '../officeBreadcrumb'
-import OfficeDocumentData from './data'
+import OfficeTemplateData from './data'
 import '../office.scss'
 
-function OfficeDocument() {
+function OfficeTemplate() {
     return (
         <div className={styles.container}>
             <SideBar />
             <div className="office-workspace">
                 <OfficeBreadcrumb currentField={"Văn bản"} />
                 <div className="office-content">
-                    <OfficeDocumentData />
+                    <OfficeTemplateData />
                 </div>
             </div>
         </div>
     )
 }
 
-export default OfficeDocument
+export default OfficeTemplate
