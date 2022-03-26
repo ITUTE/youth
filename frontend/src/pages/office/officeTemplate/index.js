@@ -11,7 +11,7 @@ function OfficeTemplate() {
         <div className={styles.container}>
             <SideBar />
             <div className="office-workspace">
-                <OfficeBreadcrumb currentField={"Văn bản"} />
+                <OfficeBreadcrumb currentField={"Biểu mẫu"} />
                 <div className="office-content">
                     <OfficeTemplateData />
                 </div>
