@@ -30,10 +30,10 @@ export default function App() {
             text: 'Văn phòng điện tử',
             to: '/office',
         },
-        {
-            text: 'CLB/Đội/Nhóm',
-            to: '/club',
-        },
+        // {
+        //     text: 'CLB/Đội/Nhóm',
+        //     to: '/club',
+        // },
         {
             text: 'SV5T',
             to: '/SV5T',
