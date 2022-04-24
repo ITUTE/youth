@@ -1,6 +1,6 @@
 # YOUTH ITUTE
 
-> Văn phòng điện tử Đoàn - Hội khoa Công nghệ Thông tin, trường Đại học Sư phạm Kỹ thuật TPHCM.
+> Văn phòng điện tử Đoàn - Hội Khoa Công nghệ Thông tin, trường Đại học Sư phạm Kỹ thuật TP.HCM.
 
 ## Deploy Backend to Heroku 
 
