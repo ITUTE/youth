@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/TienNHM/youth.git/static/css/main.6bbe7f3b.css",
+    "main.js": "/TienNHM/youth.git/static/js/main.efea8fb2.js",
+    "static/css/745.d18e7fb6.chunk.css": "/TienNHM/youth.git/static/css/745.d18e7fb6.chunk.css",
+    "static/js/745.9da42424.chunk.js": "/TienNHM/youth.git/static/js/745.9da42424.chunk.js",
+    "static/css/791.20e2baa4.chunk.css": "/TienNHM/youth.git/static/css/791.20e2baa4.chunk.css",
+    "static/js/791.0a7f1847.chunk.js": "/TienNHM/youth.git/static/js/791.0a7f1847.chunk.js",
+    "static/js/401.241045fb.chunk.js": "/TienNHM/youth.git/static/js/401.241045fb.chunk.js",
+    "static/css/740.6152be86.chunk.css": "/TienNHM/youth.git/static/css/740.6152be86.chunk.css",
+    "static/media/loginBanner.png": "/TienNHM/youth.git/static/media/loginBanner.6e63faafc3b3e6860518.png",
+    "static/media/YIT.png": "/TienNHM/youth.git/static/media/YIT.74748e0b2826a50846bb.png",
+    "static/media/googleLogo.png": "/TienNHM/youth.git/static/media/googleLogo.9cdd19465049f1b7a8e8.png",
+    "index.html": "/TienNHM/youth.git/index.html",
+    "static/media/arrow_left.svg": "/TienNHM/youth.git/static/media/arrow_left.db6e2d88c7c35a775ce4.svg",
+    "static/media/arrow_right.svg": "/TienNHM/youth.git/static/media/arrow_right.f7c6ac6d310d3b82f0a0.svg",
+    "main.6bbe7f3b.css.map": "/TienNHM/youth.git/static/css/main.6bbe7f3b.css.map",
+    "main.efea8fb2.js.map": "/TienNHM/youth.git/static/js/main.efea8fb2.js.map",
+    "745.d18e7fb6.chunk.css.map": "/TienNHM/youth.git/static/css/745.d18e7fb6.chunk.css.map",
+    "745.9da42424.chunk.js.map": "/TienNHM/youth.git/static/js/745.9da42424.chunk.js.map",
+    "791.20e2baa4.chunk.css.map": "/TienNHM/youth.git/static/css/791.20e2baa4.chunk.css.map",
+    "791.0a7f1847.chunk.js.map": "/TienNHM/youth.git/static/js/791.0a7f1847.chunk.js.map",
+    "401.241045fb.chunk.js.map": "/TienNHM/youth.git/static/js/401.241045fb.chunk.js.map",
+    "740.6152be86.chunk.css.map": "/TienNHM/youth.git/static/css/740.6152be86.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bbe7f3b.css",
+    "static/js/main.efea8fb2.js"
+  ]
+}

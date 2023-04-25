@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[401],{6401:function(n,e,f){f.r(e);f(2791),f(1916);var t=f(6871),u=f(184);e.default=function(){return(0,u.jsx)(t.Fg,{to:"/office/vanban"})}}}]);
+//# sourceMappingURL=401.241045fb.chunk.js.map
