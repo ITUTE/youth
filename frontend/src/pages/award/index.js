@@ -16,8 +16,9 @@ import {
     MDBCarouselCaption,
     MDBBtn,
 } from 'mdb-react-ui-kit'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
+import log from 'eslint-plugin-react/lib/util/log'
 
 export default function Award() {
     const homeSliders_SV5T = [
@@ -35,25 +36,34 @@ export default function Award() {
         },
     ]
 
-    const SV5T_2020_2021 = [
+    const SV5T_2019_2020 = [
         {
             imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648229638/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/SV5T_-_2020_2021_esdmu8.png',
-            title: 'SINH VIÊN 5 TỐT NĂM HỌC 2020-2021',
+            title: 'SINH VIÊN 5 TỐT NĂM HỌC 2019-2020',
             content:
                 '✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội...',
         }
     ]
 
-    const SV5T_2021_2022 = [
+    const SV5T_2020_2021 = [
         {
             imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648146506/2021-2022/Tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T%20-%20IT%20Show/SV5T-IT_Show_dtuand.jpg',
+            title: 'SINH VIÊN 5 TỐT NĂM HỌC 2020 - 2021',
+            content:
+                `✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội... Các tiêu chí Sinh viên 5 tốt: Phong trào "Sinh viên 5 tốt" là phong trào lớn trong sinh viên, nhằm hướng tới việc xây dựng môi trường, giúp sinh viên phát triển và rèn luyện bản thân dựa trên 5 tiêu chí: 💌·Đạo đức tốt, 📚Học tập tốt, 🏀Thể lực tốt, 🧡Tình nguyện tốt🌏Hội nhập tốt`,
+        }
+    ]
+
+    const SV5T_2021_2022 = [
+        {
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682446721/tdsv5t_2122_s6ticw.jpg',
             title: 'SINH VIÊN 5 TỐT NĂM HỌC 2021 - 2022',
             content:
                 `✍️Sinh viên 5 Tốt là danh hiệu cao quý của sinh viên Việt Nam đã được đưa vào hệ thống khen thưởng cấp Quốc gia và ngày càng trở thành danh hiệu có uy tín, là minh chứng cho sự cố gắng, nỗ lực không chỉ của mỗi cá nhân sinh viên mà còn là sự phấn đấu của tập thể Liên Chi hội... Các tiêu chí Sinh viên 5 tốt: Phong trào "Sinh viên 5 tốt" là phong trào lớn trong sinh viên, nhằm hướng tới việc xây dựng môi trường, giúp sinh viên phát triển và rèn luyện bản thân dựa trên 5 tiêu chí: 💌·Đạo đức tốt, 📚Học tập tốt, 🏀Thể lực tốt, 🧡Tình nguyện tốt🌏Hội nhập tốt`,
         }
     ]
 
-    const awards_SV5T_2020_2021 = [
+    const awards_SV5T_2019_2020 = [
         [
             {
                 imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648227904/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/HTTV_qjecjb.jpg',
@@ -107,7 +117,7 @@ export default function Award() {
         ],
     ]
 
-    const awards_SV5T_2021_2022 = [
+    const awards_SV5T_2020_2021 = [
         [
             {
                 imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648233298/2021-2022/Tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T%20-%20IT%20Show/34._HU%E1%BB%B2NH_TH%E1%BB%8A_THU%C3%9D_VY_-_18110400_jvlkec.jpg',
@@ -157,6 +167,69 @@ export default function Award() {
                 imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648233297/2021-2022/Tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T%20-%20IT%20Show/27._TR%E1%BA%A6N_L%C3%8A_MINH_TI%E1%BA%BEN_-_20110736_pimkng.jpg',
                 title: 'Trần Lê Minh Tiến',
                 sid: '18110339'
+            },
+        ],
+    ]
+
+    const awards_SV5T_2021_2022 = [
+        [ 
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447012/NMT_2122_gxj0br.png',
+                title: 'Nguyễn Mai Tiên',
+                sid: '20110255'
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447012/LVXA_2122_gce4ab.png',
+                title: 'Lê Vũ Xuân An',
+                sid: '21110364'
+            },
+        ],
+        [
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447011/LTMN_2122_rdvuwz.png',
+                title: 'Lê Thị Minh Nguyệt',
+                sid: '19110413'
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447016/DTL_2122_urvret.png',
+                title: 'Diệp Tấn Luân',
+                sid: '19110055'
+            },
+        ],
+        [
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682446863/LDK_2122_xsarqq.png',
+                title: 'Lê Duy Khiêm',
+                sid: '20110661'
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447014/TNTT_2122_zoymse.png',
+                title: 'Trương Nguyễn Thùy Trang',
+                sid: '21110691'
+            },
+        ],
+        [
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447106/NHMT_2122_xmdwhq.png',
+                title: 'Nguyễn Huỳnh Minh Tiến',
+                sid: '18110377'
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447013/VTMN_2122_mfotuq.png',
+                title: 'Văn Thị Mười Ngọc',
+                sid: '21110561'
+            },
+        ],
+        [
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682447016/LHD_2122_soe3yz.png',
+                title: 'Lê Hải Đăng',
+                sid: '2110561'
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682448229/PTPN_2122_wmocqn.png',
+                title: 'Phạm Thị Phương Nghi',
+                sid: '21110556'
             },
         ],
     ]
@@ -395,6 +468,85 @@ export default function Award() {
                     </div>
                 </div>
 
+                {/* 2021 - 2022 */}
+                <div className={clsx('d-flex flex-column', styles.news)}>
+                    <SessionHeader title="2021 - 2022" />
+
+                    {SV5T_2021_2022.map((item, index) => (
+                        <MDBCard key={index} className={styles.news__card}>
+                            <MDBRow className="g-0">
+                                <MDBCol md="4">
+                                    <MDBCardImage
+                                        src={item.imgUrl}
+                                        alt="..."
+                                        fluid
+                                        className={styles['news__card-image']}
+                                    />
+                                </MDBCol>
+                                <MDBCol md="8">
+                                    <MDBCardBody
+                                        className={styles['news__card-body']}
+                                    >
+                                        <MDBCardTitle>{item.title}</MDBCardTitle>
+                                        <MDBCardText>{item.content}</MDBCardText>
+                                        <MDBCardText>
+                                            <small className="text-muted">
+                                                Last updated 4 days ago
+                                            </small>
+                                        </MDBCardText>
+                                    </MDBCardBody>
+                                </MDBCol>
+                            </MDBRow>
+                        </MDBCard>
+                    ))}
+                </div>
+                <div
+                    className={clsx(
+                        'd-flex flex-column',
+                        styles.bluebg,
+                        styles.currEvent,
+                    )}
+                >
+                    <MDBCarousel
+                        showIndicators
+                        showControls
+                        className={styles.currEvent__body}
+                    >
+                        <MDBCarouselInner>
+                            {awards_SV5T_2021_2022.map((item, index) => (
+                                <MDBCarouselItem
+                                    className={clsx({
+                                        active: index === 0,
+                                    })}
+                                >
+                                    <div className={styles['card-group']}>
+                                        {item.map((student, i) => (
+                                            <MDBCard
+                                                key={i}
+                                                className={
+                                                    styles['card-group__item']
+                                                }
+                                            >
+                                                <MDBCardImage
+                                                    src={student.imgUrl}
+                                                    position="top"
+                                                    alt="..."
+                                                />
+                                                <MDBCardBody>
+                                                    {/* <MDBCardTitle>{student.title}</MDBCardTitle> */}
+                                                    <a href="https://fb.com/DoanHoiITUTE">Chi tiết</a>
+                                                    {/* <MDBCardText>{student.sid}</MDBCardText> */}
+                                                    {/* <MDBBtn href="#">Chi tiết</MDBBtn> */}
+                                                </MDBCardBody>
+                                            </MDBCard>
+                                        ))}
+                                    </div>
+                                </MDBCarouselItem>
+                            ))}
+                        </MDBCarouselInner>
+                    </MDBCarousel>
+                </div>
+
                 {/* 2020 - 2021 */}
                 <div className={clsx('d-flex flex-column', styles.news)}>
                     <SessionHeader title="2020 - 2021" />
@@ -418,7 +570,7 @@ export default function Award() {
                                         <MDBCardText>{item.content}</MDBCardText>
                                         <MDBCardText>
                                             <small className="text-muted">
-                                                Last updated 5 days ago
+                                                Last updated 4 days ago
                                             </small>
                                         </MDBCardText>
                                     </MDBCardBody>
@@ -474,11 +626,11 @@ export default function Award() {
                     </MDBCarousel>
                 </div>
 
-                {/* 2021 - 2022 */}
+                {/* 2019 - 2020 */}
                 <div className={clsx('d-flex flex-column', styles.news)}>
-                    <SessionHeader title="2021 - 2022" />
+                    <SessionHeader title="2019 - 2020" />
 
-                    {SV5T_2021_2022.map((item, index) => (
+                    {SV5T_2019_2020.map((item, index) => (
                         <MDBCard key={index} className={styles.news__card}>
                             <MDBRow className="g-0">
                                 <MDBCol md="4">
@@ -497,7 +649,7 @@ export default function Award() {
                                         <MDBCardText>{item.content}</MDBCardText>
                                         <MDBCardText>
                                             <small className="text-muted">
-                                                Last updated 4 days ago
+                                                Last updated 5 days ago
                                             </small>
                                         </MDBCardText>
                                     </MDBCardBody>
@@ -519,7 +671,7 @@ export default function Award() {
                         className={styles.currEvent__body}
                     >
                         <MDBCarouselInner>
-                            {awards_SV5T_2021_2022.map((item, index) => (
+                            {awards_SV5T_2019_2020.map((item, index) => (
                                 <MDBCarouselItem
                                     className={clsx({
                                         active: index === 0,
@@ -874,3 +1026,33 @@ export default function Award() {
         </>
     )
 }
+
+
+export const GG_SHEET_URL = "https://docs.google.com/spreadsheets/d/15OgjKPQIg8_hSGISfdgvtSyome2zxQkVpbGPcm5IGpI/gviz/tq?tqx=out:json"
+
+export function combineArrays(first, second) {
+    return first.reduce((acc, val, ind) => {
+      acc[val] = second[ind];
+      return acc;
+    }, {});
+  };
+
+export function getGoogleSheetData(url) {
+    return fetch(url)
+      .then(r => r.text())
+      .then(data => {
+        const r = data.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
+        if (r && r.length === 2) {
+          const obj = JSON.parse(r[1]);
+          const table = obj.table;
+          const header = table.cols.map(({ label } ) => label);
+          const rows = table.rows.map(({ c } ) => c.map((e) => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
+          var result = rows.map((row ) => {
+            var student = combineArrays(header, row);
+            return student;
+          });
+
+          return result;
+        }
+      })
+  }
