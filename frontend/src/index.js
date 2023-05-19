@@ -8,6 +8,7 @@ import store from 'data/store'
 import './index.scss'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import { GoogleAuthProvider } from './hooks/useGoogleAuth'
+import MessengerChat from './components/MessengerChat'
 
 ReactDOM.render(
     <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
             <Provider store={store}>
                 <BrowserRouter>
                     <App />
+                    <MessengerChat />
                 </BrowserRouter>
             </Provider>
         </GoogleAuthProvider>
