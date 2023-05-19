@@ -3,7 +3,6 @@
     "version": "0.1.0",
     "private": true,
     "proxy": "http://localhost:5050",
-    "homepage": "https://github.com/TienNHM/youth.git",
     "dependencies": {
         "@reduxjs/toolkit": "^1.7.2",
         "@testing-library/jest-dom": "^5.14.1",
