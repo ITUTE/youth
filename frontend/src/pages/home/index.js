@@ -159,6 +159,20 @@ export default function Home() {
     const awards = [
         [
             {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685126043/2022-2023/mit2023.png',
+                title: 'MASTERING IT 2023',
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685126181/2022-2023/ON-KTLT-2023.png',
+                title: 'ÔN TẬP KTLT 2023',
+            },
+            {
+                imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685126359/2022-2023/hACKATHON-2023.jpg',
+                title: 'HACKATHON 2023',
+            },
+        ],
+        [
+            {
                 imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648144955/2020-2021/Mastering%20IT/MIT2021_ejzri7.jpg',
                 title: 'Matering IT',
             },
