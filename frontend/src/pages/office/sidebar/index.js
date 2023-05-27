@@ -65,37 +65,37 @@ export default class SideBar extends Component {
                             </Link>
                         </div>
                         <div className={styles.link}>
-                            <Link to="/office/tracuudiem">
+                            <Link to="#">
                                 <img src={Img3} alt="3"></img>
-                                <span>Tra cứu điểm</span>
+                                <span className={styles.lowcolor}>Tra cứu điểm</span>
                             </Link>
                         </div>
                         <div className={styles.link + " " + styles.big}>
-                            <Link to="/office/doanhoivien">
+                            <Link to="#">
                                 <img src={Img4} alt="4"></img>
-                                <span>Quản lý<br></br>đoàn viên - hội viên</span>
+                                <span className={styles.lowcolor}>Quản lý<br></br>đoàn viên - hội viên</span>
                             </Link>
                         </div>
                         <div className={styles.link}>
-                            <Link to="/office/trinhkyvanban">
+                            <Link to="#">
                                 <img src={Img5} alt="5"></img>
                                 <span className={styles.lowcolor}>Trình ký văn bản</span>
                             </Link>
                         </div>
                         <div className={styles.link}>
-                            <Link to="/office/thongtinbaocao">
+                            <Link to="#">
                                 <img src={Img6} alt="6"></img>
                                 <span className={styles.lowcolor}>Thông tin báo cáo</span>
                             </Link>
                         </div>
                         <div className={styles.link}>
-                            <Link to="/office/quanlyvanban">
+                            <Link to="#">
                                 <img src={Img7} alt="7"></img>
                                 <span className={styles.lowcolor}>Quản lý văn bản</span>
                             </Link>
                         </div>
                         <div className={styles.link}>
-                            <Link to="/office/quanlyhoatdong">
+                            <Link to="#">
                                 <img src={Img8} alt="8"></img>
                                 <span className={styles.lowcolor}>Quản lý hoạt động</span>
                             </Link>
