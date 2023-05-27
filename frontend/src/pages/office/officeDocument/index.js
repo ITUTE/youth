@@ -3,7 +3,7 @@ import SideBar from '../sidebar'
 //import Body from './body'
 import styles from '../index.module.scss'
 import OfficeBreadcrumb from '../officeBreadcrumb'
-import OfficeDocumentData from './data'
+import OfficeDocumentData from './OfficeDocumentData'
 import '../office.scss'
 
 function OfficeDocument() {

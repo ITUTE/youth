@@ -1,157 +1,163 @@
-import React from 'react';
-import { MDBDataTableV5 } from 'mdbreact';
-import { Badge, Button } from 'react-bootstrap';
+export const DOC_COLUMNS = [
+    {
+        label: 'Tên văn bản',
+        field: 'name',
+        width: 300,
+    },
+    {
+        label: 'Số',
+        field: 'number',
+        width: 100,
+    },
+    {
+        label: 'Loại',
+        field: 'type',
+        width: 300,
+    },
+    {
+        label: 'Ngày',
+        field: 'date',
+        sort: 'asc',
+        width: 100,
+    },
+    {
+        label: 'Link',
+        field: 'url',
+        sort: 'disabled',
+        width: 150,
+    },
+    {
+        label: 'Trạng thái',
+        field: 'status',
+        width: 100,
+    },
+]
 
-export default function OfficeDocumentData() {
-
-    const COLUMNS = [
-        {
-            label: 'STT',
-            field: 'no',
-            width: 100,
-        },
-        {
-            label: 'Tên',
-            field: 'name',
-            width: 300,
-        },
-        {
-            label: 'Số văn bản',
-            field: 'number',
-            width: 100,
-        },
-        {
-            label: 'Loại',
-            field: 'type',
-            width: 200,
-        },
-        {
-            label: 'Ngày ban hành',
-            field: 'date',
-            sort: 'asc',
-            width: 100,
-        },
-        {
-            label: 'Link',
-            field: 'url',
-            sort: 'disabled',
-            width: 150,
-        },
-        {
-            label: 'Trạng thái',
-            field: 'status',
-            width: 100,
-        },
-    ]
-
-    const ROWS = [
-        {
-            no: 1,
-            name: 'KẾ HOẠCH Tổ chức chương trình Thiết kế CV “CV Contest” năm 2022 Khoa Công nghệ Thông tin',
-            number: 6,
-            type: 'KH-HSV-CNTT',
-            date: '2022/02/04',
-            url: 'https://docs.google.com/document/d/1ge1iHfXM1c_wwTpMSSX49wDJzgSbkDJj/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 2,
-            name: 'KẾ HOẠCH Tổ chức cuộc thi học thuật Hackathon mở rộng năm 2022 Khoa Công nghệ Thông tin',
-            number: 5,
-            type: 'KH/ĐTN-CNTT',
-            date: '2022/02/22',
-            url: 'https://docs.google.com/document/d/1lJXEWdb9yyQoEuYTVKG119NhYn55ryrt/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 3,
-            name: 'KẾ HOẠCH Tổ chức Trại tập huấn kỹ năng và chương trình giao lưu Cán bộ Đoàn - Hội Khoa Công nghệ Thông Tin',
-            number: 11,
-            type: 'KH-HSV-CNTT',
-            date: '2022/03/03',
-            url: 'https://docs.google.com/document/d/1uN2gzIeoLmtaenM1EpPl9lEDQO5j17B5/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 4,
-            name: 'KẾ HOẠCH Tổ chức chương trình “Noel ấm áp” năm 2021 Khoa Công nghệ Thông tin',
-            number: 4,
-            type: 'KHLT-ĐTN-HSV',
-            date: '2021/12/20',
-            url: 'https://docs.google.com/document/d/18prwHNYCsg7VL4vxrD-MHKG7m00NQpOK/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 5,
-            name: 'KẾ HOẠCH Tổ chức chương trình “ IT SÁNG TẠO” năm 2021 Kỷ niệm 39 năm ngày Nhà giáo Việt Nam (20/11/1982 - 20/11/2021) Khoa Công nghệ Thông tin',
-            number: 3,
-            type: 'KH-HSV-CNTT',
-            date: '2021/10/28',
-            url: 'https://docs.google.com/document/d/1HrEqcLhoB8oFYyCoPfw_CEFRUN72VMdq/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 6,
-            name: 'KẾ HOẠCH Tổ chức chương trình “Thể dục Online - Say bye Covid” Khoa Công nghệ Thông tin năm 2021',
-            number: 8,
-            type: 'KHLT-ĐTN-HSV-CNTT',
-            date: '2021/08/05',
-            url: 'https://docs.google.com/document/d/14YXNbenuuBiOJzJ9gSLPZVbzLAUnUL8i/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-        {
-            no: 7,
-            name: 'KẾ HOẠCH Tổ chức chương trình “Trung thu yêu thương” năm 2021 Khoa Công nghệ Thông tin',
-            number: 4,
-            type: 'KHLT-ĐTN-HSV',
-            date: '2021/08/30',
-            url: 'https://docs.google.com/document/d/1gXmeQN6_JaK8DdKhu43Aa1hi1_x97n6t/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
-            status: 'Active',
-        },
-    ]
-
-    const exportData = (columns, rows) => {
-        const rowsData = rows.map(data => {
-            const getLink = (url) => {
-                return (
-                    <Button
-                        size="sm" variant="outline-success"
-                        href={url} target="_blank">
-                        Xem
-                    </Button>
-                )
-            }
-
-            const getStatus = (status) => {
-                return (
-                    <Badge
-                        pill
-                        bg={status.toLowerCase() === 'active' ? 'primary' : 'danger'}
-                    >
-                        {status}
-                    </Badge>
-                )
-            }
-            return {
-                ...data,
-                url: getLink(data.url),
-                status: getStatus(data.status),
-            }
-        })
-
-        return {
-            columns: columns,
-            rows: rowsData
-        }
-    }
-
-    return (
-        <MDBDataTableV5
-            hover fullPagination
-            searchTop searchBottom={false}
-            entriesOptions={[5, 10, 20, 50, 100]}
-            entries={5}
-            pagesAmount={4}
-            data={exportData(COLUMNS, ROWS)} />
-    );
-}
+export const DOC_ROWS = [
+    {
+        no: 1,
+        name: 'KẾ HOẠCH Tổ chức chương trình "Trung thu - Ánh trăng ấm áp" năm 2022',
+        number: 1,
+        type: 'KHLT-CBSV-ĐTN-HSV',
+        date: '2022/08/30',
+        url: 'https://drive.google.com/file/d/1TVnGReDK1HVOVayvjg2kywPLO_YZfyJy/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 1,
+        name: 'KẾ HOẠCH Tổ chức cuộc thi thiết kế video Tiktok "Gia điệu tự hào HCMUTE" Chào mừng kỷ niệm 60 năm ngày thành lập Trường Đại học Sư phạm Kỹ thuật TP.HCM (05/10/1962 - 05/10/2022)',
+        number: 1,
+        type: 'KH/ĐTN-CNTT',
+        date: '2022/09/05',
+        url: 'https://drive.google.com/file/d/1b7c4QpmCRSSu72BAY48uv9EodgfaA9_s/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 1,
+        name: 'KẾ HOẠCH Tổ chức chương trình "IT Sáng tạo" và Lễ "Tri ân Thầy cô" Kỷ niệm 40 năm ngày Nhà giáo Việt Nam (20/11/1982 - 20/11/2022) Khoa Công nghệ Thông tin',
+        number: 1,
+        type: 'KH-HSV-CNTT',
+        date: '2022/10/30',
+        url: 'https://drive.google.com/file/d/1t7KdHGOn1Sad_rWNDxaWIONF8QpvWnQD/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 1,
+        name: 'KẾ HOẠCH Tổ chức chương trình "Sóng IT" - Tuyên dương Gương điển hình tuổi trẻ khoa Công nghệ Thông tin năm 2022',
+        number: 1,
+        type: 'KHLT-ĐTN-HSV-CNTT',
+        date: '2022/11/07',
+        url: 'https://drive.google.com/file/d/1vnyPjmo47xtzGA2JeLctJxT3zY_H_Veg/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 2,
+        name: 'KẾ HOẠCH Tổ chức Hội trại kỹ năng chủ đề: "Bản lĩnh IT" năm 2022 Khoa Công nghệ Thông tin',
+        number: 2,
+        type: 'KH/ĐTN-CNTT',
+        date: '2022/11/07',
+        url: 'https://drive.google.com/file/d/1SQAhdwIWkl1uKpTyp_CeGSmbYaD4niIF/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 2,
+        name: 'KẾ HOẠCH Tổ chức hoạt động gây quỹ cho Chiến dịch "Xuân tình nguyện năm 2023" Khoa Công nghệ Thông tin',
+        number: 2,
+        type: 'KH-HSV-CNTT',
+        date: '2022/11/24',
+        url: 'https://drive.google.com/file/d/1g1PsVQdnn7ZgYaNMxjQsQU7k5uDwLCAt/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 3,
+        name: 'KẾ HOẠCH Tổ chức mở lớp ôn tập hỗ trợ kiến thức môn "Nhập môn lập trình" năm 2022 khoa Công nghệ Thông tin',
+        number: 3,
+        type: 'KH/ĐTN-CNTT',
+        date: '2022/11/07',
+        url: 'https://drive.google.com/file/d/1j8JF9M4R-j8w_GvMAX0JEROsMSvA16uu/view?usp=sharing',
+        status: 'Đã ký',
+    },
+    {
+        no: 1,
+        name: 'KẾ HOẠCH Tổ chức chương trình Thiết kế CV “CV Contest” năm 2022 Khoa Công nghệ Thông tin',
+        number: 6,
+        type: 'KH-HSV-CNTT',
+        date: '2022/02/04',
+        url: 'https://docs.google.com/document/d/1ge1iHfXM1c_wwTpMSSX49wDJzgSbkDJj/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 2,
+        name: 'KẾ HOẠCH Tổ chức cuộc thi học thuật Hackathon mở rộng năm 2022 Khoa Công nghệ Thông tin',
+        number: 5,
+        type: 'KH/ĐTN-CNTT',
+        date: '2022/02/22',
+        url: 'https://docs.google.com/document/d/1lJXEWdb9yyQoEuYTVKG119NhYn55ryrt/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 3,
+        name: 'KẾ HOẠCH Tổ chức Trại tập huấn kỹ năng và chương trình giao lưu Cán bộ Đoàn - Hội Khoa Công nghệ Thông Tin',
+        number: 11,
+        type: 'KH-HSV-CNTT',
+        date: '2022/03/03',
+        url: 'https://docs.google.com/document/d/1uN2gzIeoLmtaenM1EpPl9lEDQO5j17B5/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 4,
+        name: 'KẾ HOẠCH Tổ chức chương trình “Noel ấm áp” năm 2021 Khoa Công nghệ Thông tin',
+        number: 4,
+        type: 'KHLT-ĐTN-HSV',
+        date: '2021/12/20',
+        url: 'https://docs.google.com/document/d/18prwHNYCsg7VL4vxrD-MHKG7m00NQpOK/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 5,
+        name: 'KẾ HOẠCH Tổ chức chương trình “ IT SÁNG TẠO” năm 2021 Kỷ niệm 39 năm ngày Nhà giáo Việt Nam (20/11/1982 - 20/11/2021) Khoa Công nghệ Thông tin',
+        number: 3,
+        type: 'KH-HSV-CNTT',
+        date: '2021/10/28',
+        url: 'https://docs.google.com/document/d/1HrEqcLhoB8oFYyCoPfw_CEFRUN72VMdq/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 6,
+        name: 'KẾ HOẠCH Tổ chức chương trình “Thể dục Online - Say bye Covid” Khoa Công nghệ Thông tin năm 2021',
+        number: 8,
+        type: 'KHLT-ĐTN-HSV-CNTT',
+        date: '2021/08/05',
+        url: 'https://docs.google.com/document/d/14YXNbenuuBiOJzJ9gSLPZVbzLAUnUL8i/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+    {
+        no: 7,
+        name: 'KẾ HOẠCH Tổ chức chương trình “Trung thu yêu thương” năm 2021 Khoa Công nghệ Thông tin',
+        number: 4,
+        type: 'KHLT-ĐTN-HSV',
+        date: '2021/08/30',
+        url: 'https://docs.google.com/document/d/1gXmeQN6_JaK8DdKhu43Aa1hi1_x97n6t/edit?usp=sharing&ouid=115258241827326023436&rtpof=true&sd=true',
+        status: 'Đã ký',
+    },
+]
