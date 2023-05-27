@@ -1,7 +1,7 @@
 export const CONTACTS = [
     [
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1644160890/Logo/logo_FIT_stroke.png',
+            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1644160893/Logo/YIT_kegwop.png',
             title: 'Website Khoa Công nghệ Thông tin',
             url: 'http://fit.hcmute.edu.vn/',
         },
