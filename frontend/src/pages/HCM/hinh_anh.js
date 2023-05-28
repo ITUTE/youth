@@ -2,12 +2,12 @@ export const SECTION_TITLE = 'MỘT VÀI HÌNH ẢNH VỀ CHỦ TỊCH HỒ CHÍ
 
 export const SLIDERS = [
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685258433/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.jpg',
+        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685258433/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.webp',
         title: '',
         content: ''
     },
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685258082/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.jpg',
+        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685258082/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.webp',
         title: '',
         content: ''
     },
@@ -15,7 +15,7 @@ export const SLIDERS = [
 
 export const ITEMS = [ 
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685259549/2022-2023/HCM/anh/H%C3%ACnh_16_th%E1%BA%BB_%C4%91%E1%BA%A3ng_vi%C3%AAn_q2umtk.jpg',
+        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685259549/2022-2023/HCM/anh/H%C3%ACnh_16_th%E1%BA%BB_%C4%91%E1%BA%A3ng_vi%C3%AAn_q2umtk.webp',
         title: 'Thẻ đảng viên Đảng Cộng sản Pháp của đồng chí Nguyễn Ái Quốc.',
     },
     {

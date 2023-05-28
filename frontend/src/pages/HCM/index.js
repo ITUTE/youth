@@ -81,7 +81,7 @@ export default function HCM() {
                     >
                         <div className={styles.imageShowcase}>
                             {TIEUSU.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} />
+                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
                             ))}
                         </div>
                     </MDBCarousel>
@@ -124,9 +124,9 @@ export default function HCM() {
                             </MDBCarouselInner>
                         </MDBCarousel>
                     </div>
-                    <div className={styles.bottom} id="tieu-su">
+                    <div className={styles.bottom} id="di-san">
                         <div className={styles['bottom-left']}></div>
-                        <a href='#tieu-su' className={styles['bottom-right']}>{DISAN.SECTION_TITLE}</a>
+                        <a href='#di-san' className={styles['bottom-right']}>{DISAN.SECTION_TITLE}</a>
                     </div>
                 </div>
 
@@ -141,7 +141,7 @@ export default function HCM() {
                     >
                         <div className={styles.imageShowcase}>
                             {DISAN.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} />
+                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
                             ))}
                         </div>
                     </MDBCarousel>
@@ -184,9 +184,9 @@ export default function HCM() {
                             </MDBCarouselInner>
                         </MDBCarousel>
                     </div>
-                    <div className={styles.bottom} id="tieu-su">
+                    <div className={styles.bottom} id="thu-gui-thanh-nien">
                         <div className={styles['bottom-left']}></div>
-                        <a href='#tieu-su' className={styles['bottom-right']}>{THU_GUI_TN.SECTION_TITLE}</a>
+                        <a href='#thu-gui-thanh-nien' className={styles['bottom-right']}>{THU_GUI_TN.SECTION_TITLE}</a>
                     </div>
                 </div>
 
@@ -201,14 +201,14 @@ export default function HCM() {
                     >
                         <div className={styles.imageShowcase}>
                             {THU_GUI_TN.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} />
+                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
                             ))}
                         </div>
                     </MDBCarousel>
                 </div>
             </MDBContainer>
 
-            {/* DI SẢN */}
+            {/* HÌNH ẢNH */}
             <MDBContainer
                 fluid
                 className={clsx('d-flex flex-column', styles.container)}
@@ -243,9 +243,9 @@ export default function HCM() {
                             </MDBCarouselInner>
                         </MDBCarousel>
                     </div>
-                    <div className={styles.bottom} id="tieu-su">
+                    <div className={styles.bottom} id="hinh-anh">
                         <div className={styles['bottom-left']}></div>
-                        <a href='#tieu-su' className={styles['bottom-right']}>{HINH_ANH.SECTION_TITLE}</a>
+                        <a href='#hinh-anh' className={styles['bottom-right']}>{HINH_ANH.SECTION_TITLE}</a>
                     </div>
                 </div>
 
