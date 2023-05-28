@@ -265,7 +265,7 @@ export default function HCM() {
                                     alt="..."
                                     className={styles['news__card-image']}
                                 />
-                                <MDBCardTitle className='p-3 d-flex justify-content-center'>{item.title}</MDBCardTitle>
+                                <MDBCardTitle className={styles['title_info']}>{item.title}</MDBCardTitle>
                             </MDBCard>
                             ))
                         }

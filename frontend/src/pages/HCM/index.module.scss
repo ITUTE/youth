@@ -24,7 +24,7 @@
         &-image {
             border-radius: 0.625rem 0 0 0.625rem;
             padding: 20px;
-            height: 500px;
+            height: 400px;
             object-fit: contain;
         }
         &-body {
@@ -38,6 +38,50 @@
                 color: #204b9e;
             }
         }
+        &::before {
+            content: url(https://img.icons8.com/color/96/vietnam.png);
+            width: 100px;
+            font-size: 4rem;
+            margin-left: 10px;
+            line-height: .75;
+            position: absolute;
+        }
+        .title_info {
+            padding: 20px;
+            font-size: 1.3rem;
+            letter-spacing: -.02rem;
+            padding: 1.5rem;
+            position: relative;
+            font-style: italic;
+            background-color: white;
+
+            &::first-letter {
+                font-size: 3rem;
+                font-weight: bold;
+                color: brown;
+                // background-color: lightgoldenrodyellow;
+                border-radius: 2px;
+                // box-shadow: 3px 3px 0 darkorange;
+                // padding: 6px 3px;
+                margin-right: 6px;
+                float: left;
+                font-family: 'Times New Roman', Times, serif;
+            }
+
+            &::before {
+                content: '"';
+                width: 100px;
+                opacity: .15;
+                font-size: 4rem;
+                line-height: .75;
+                position: absolute;
+                left: -0.02rem;
+                margin-left: -2px;
+                font-style: italic;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+        
     }
 }
 
