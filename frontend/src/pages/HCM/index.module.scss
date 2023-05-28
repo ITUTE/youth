@@ -236,8 +236,10 @@
 .imageShowcase {
     align-items: center;
     > * {
-        margin: 20px;
-        border: 20px solid #fff;
+        margin: 15px;
+        border: 20px solid #ffffffd6;
+        // outline: 20px solid #fff;
+        border-style: groove;
         border-radius: 10px;
         box-shadow:  #bce4ff 0px 0px 10px 0px;
         transition-duration: 0.5s;
@@ -247,6 +249,7 @@
 
     img {
         width: 50vh;
+        // max-height: 75vh;
         object-fit: cover;
         object-position: center;
     }
