@@ -47,6 +47,10 @@ export default function App() {
             to: '/award',
         },
         {
+            text: 'Đánh giá',
+            to: '/feedback',
+        },
+        {
             text: 'Về chúng tôi',
             to: '/about',
         },
