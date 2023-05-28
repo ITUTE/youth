@@ -36,7 +36,7 @@ export default function App() {
         // },
         {
             text: 'Sinh viên 5 tốt',
-            to: '/ITUTE-sv5t',
+            to: '/it-sv5t',
         },
         {
             text: 'Không gian văn hóa Hồ Chí Minh',

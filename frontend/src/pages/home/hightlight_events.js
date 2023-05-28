@@ -27,20 +27,20 @@ export const HIGHTLIGHT_2022_2023 = [
             title: 'XUÂN TÌNH NGUYỆN 2023',
         },
     ],
-    [
-        {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648144955/2020-2021/Mastering%20IT/MIT2021_ejzri7.jpg',
-            title: 'MASTERING IT 2022',
-        },
-        {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648144592/2021-2022/Hackathon/Hackathon-2022_wgfc5n.png',
-            title: 'HACKATHON 2022',
-        },
-        {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648145092/2021-2022/beCod3r/beCod3r-2021_g0pdum.jpg',
-            title: 'BECODER 2022',
-        },
-    ],
+    // [
+    //     {
+    //         imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648144955/2020-2021/Mastering%20IT/MIT2021_ejzri7.jpg',
+    //         title: 'MASTERING IT 2022',
+    //     },
+    //     {
+    //         imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648144592/2021-2022/Hackathon/Hackathon-2022_wgfc5n.png',
+    //         title: 'HACKATHON 2022',
+    //     },
+    //     {
+    //         imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648145092/2021-2022/beCod3r/beCod3r-2021_g0pdum.jpg',
+    //         title: 'BECODER 2022',
+    //     },
+    // ],
     [
         {
             imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648145201/2021-2022/IT%20Show/IT-Show_qll6rm.jpg',

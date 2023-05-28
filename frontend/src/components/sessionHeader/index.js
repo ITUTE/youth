@@ -6,9 +6,9 @@ function MarkHome({ title, index }) {
     return (
         <div className={styles.header}>
             <h4 className={styles.header__title}>{title}</h4>
-            <MDBBtn outline className={styles.header__btn}>
+            {/* <MDBBtn outline className={styles.header__btn}>
                 Xem thêm
-            </MDBBtn>
+            </MDBBtn> */}
         </div>
     )
 }
