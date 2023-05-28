@@ -37,7 +37,7 @@ export default function About() {
             >
                 <div className={clsx(styles.banner)}>
                     <div className={styles.left}>
-                        <img src={logoYIT} alt="" width="150" />
+                        <img src={logoYIT} alt="" width="150" loading="lazy"/>
                     </div>
                     <div className={styles.right}>
                         <h1 style={{fontSize: '3.5rem'}}>
@@ -57,13 +57,13 @@ export default function About() {
                 {/* BCH ĐOÀN KHOA*/}
                 <div className={clsx('d-flex flex-column', styles.news)}>
                     <SessionHeader title="BAN CHẤP HÀNH ĐOÀN KHOA CÔNG NGHỆ THÔNG TIN" />
-                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175681/2022-2023/bch-doan-khoa.png" alt="" />
+                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175681/2022-2023/bch-doan-khoa.png" alt="" loading="lazy"/>
                 </div>
 
                 {/* BCH LCH KHOA*/}
                 <div className={clsx('d-flex flex-column', styles.news)}>
                     <SessionHeader title="BAN CHẤP HÀNH LIÊN CHI HỘI KHOA CÔNG NGHỆ THÔNG TIN" />
-                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175734/2022-2023/bch-lch.png" alt="" />
+                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175734/2022-2023/bch-lch.png" alt="" loading="lazy"/>
                 </div>
 
                 <div
@@ -113,12 +113,22 @@ export default function About() {
                                     <MDBCardTitle>{address.title}</MDBCardTitle>
                                     <MDBCardText>{address.content}</MDBCardText>
                                     <MDBCardText>
-                                        <small className="text-muted">
-                                            Email: {' '}
-                                            <a href="mailto:yit@hcmute.edu.vn" target="_blank" rel="noreferrer">
-                                                yit@hcmute.edu.vn
-                                            </a>
-                                        </small>
+                                        <div>
+                                            <small className="text-muted">
+                                                Email: {' '}
+                                                <a href="mailto:yit@hcmute.edu.vn" target="_blank" rel="noreferrer">
+                                                    yit@hcmute.edu.vn
+                                                </a>
+                                            </small>
+                                        </div>
+                                        <div>
+                                            <small className="text-muted">
+                                                Copyright ©️ {new Date().getFullYear()}. Maded with ❤️‍🔥 by {' '}
+                                                <a href="https://github.com/TienNHM" target="_blank" rel="noreferrer">
+                                                    TienNHM
+                                                </a>
+                                            </small>
+                                        </div>
                                     </MDBCardText>
                                 </MDBCardBody>
                             </MDBCol>

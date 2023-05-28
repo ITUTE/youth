@@ -39,8 +39,8 @@ export default function App() {
             to: '/SV5T',
         },
         {
-            text: 'Hỗ trợ sinh viên',
-            to: '/support',
+            text: 'Không gian văn hóa Hồ Chí Minh',
+            to: '/HCM',
         },
         {
             text: 'Vinh danh',
