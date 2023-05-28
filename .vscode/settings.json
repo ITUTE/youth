@@ -1,5 +1,11 @@
 {
     "git.ignoreLimitWarning": true,
     "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo, Monaco, 'Courier New', monospace, Consolas",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[typescript]": {
+        "editor.formatOnSave": false
+    }
 }

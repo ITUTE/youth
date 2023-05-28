@@ -6,6 +6,7 @@ import Page404 from 'pages/Page404'
 import Support from 'pages/support'
 import SV5T from 'pages/sv5t'
 import HCM from 'pages/HCM'
+import Feedback from 'pages/feedback'
 import { lazy, Suspense } from 'react'
 import { Route } from 'react-router-dom'
 
@@ -58,6 +59,10 @@ const routes = [
     {
         path: '/login',
         element: <Login />,
+    },
+    {
+        path: '/feedback',
+        element: <Feedback />,
     },
     {
         path: '/',
