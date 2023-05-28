@@ -35,8 +35,8 @@ export default function App() {
         //     to: '/club',
         // },
         {
-            text: 'SV5T',
-            to: '/SV5T',
+            text: 'Sinh viên 5 tốt',
+            to: '/ITUTE-sv5t',
         },
         {
             text: 'Không gian văn hóa Hồ Chí Minh',
