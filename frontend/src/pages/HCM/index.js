@@ -21,6 +21,7 @@ import styles from './index.module.scss'
 import log from 'eslint-plugin-react/lib/util/log'
 import * as TIEUSU from './tieu_su'
 import * as DISAN from './di_san'
+import * as THU_GUI_TN from './thu_gui_thanh_nien'
 
 export default function HCM() {
 
@@ -139,6 +140,66 @@ export default function HCM() {
                     >
                         <div className={styles.imageShowcase}>
                             {DISAN.ITEMS.map((item, index) => (
+                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} />
+                            ))}
+                        </div>
+                    </MDBCarousel>
+                </div>
+            </MDBContainer>
+
+             {/* THƯ BÁC GỬI THANH NIÊN */}
+             <MDBContainer
+                fluid
+                className={clsx('d-flex flex-column', styles.container)}
+            >
+                <div className={clsx(styles.banner)}>
+                    <div className={styles.left}>
+                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
+                        <h2>
+                            THƯ BÁC GỬI THANH NIÊN
+                        </h2>
+                    </div>
+                    
+                    <div className={clsx(styles.right)}>
+                        <MDBCarousel showIndicators showControls fade>
+                            <MDBCarouselInner className="rounded-2 ">
+                                {THU_GUI_TN.SLIDERS.map((item, index) => (
+                                    <MDBCarouselItem
+                                        className={clsx(styles.bannerItem, {
+                                            active: index === 0,
+                                        })}
+                                        styles={{height: '20vh !important'}}
+                                        key={index}
+                                    >
+                                        <MDBCarouselElement
+                                            src={item.imgUrl}
+                                            alt={item.title}
+                                        />
+                                        <MDBCarouselCaption>
+                                            <h5>{item.title}</h5>
+                                        </MDBCarouselCaption>
+                                    </MDBCarouselItem>
+                                ))}
+                            </MDBCarouselInner>
+                        </MDBCarousel>
+                    </div>
+                    <div className={styles.bottom} id="tieu-su">
+                        <div className={styles['bottom-left']}></div>
+                        <a href='#tieu-su' className={styles['bottom-right']}>{THU_GUI_TN.SECTION_TITLE}</a>
+                    </div>
+                </div>
+
+                <div
+                    className={clsx(
+                        'd-flex flex-column',
+                        styles.bluebg,
+                        styles.currEvent,
+                    )}
+                >
+                    <MDBCarousel className={styles.currEvent__body}
+                    >
+                        <div className={styles.imageShowcase}>
+                            {THU_GUI_TN.ITEMS.map((item, index) => (
                                 <img src={item.imgUrl} alt={index} key={'tieusu-'+index} />
                             ))}
                         </div>
