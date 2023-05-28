@@ -23,6 +23,7 @@ import * as TIEUSU from './tieu_su'
 import * as DISAN from './di_san'
 import * as THU_GUI_TN from './thu_gui_thanh_nien'
 import * as HINH_ANH from './hinh_anh'
+import * as SDLLV from './sua_doi_loi_lam_viec'
 
 export default function HCM() {
 
@@ -141,6 +142,66 @@ export default function HCM() {
                     >
                         <div className={styles.imageShowcase}>
                             {DISAN.ITEMS.map((item, index) => (
+                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
+                            ))}
+                        </div>
+                    </MDBCarousel>
+                </div>
+            </MDBContainer>
+
+            {/* SỬA ĐỔI LỐI LÀM VIỆC */}
+            <MDBContainer
+                fluid
+                className={clsx('d-flex flex-column', styles.container)}
+            >
+                <div className={clsx(styles.banner)}>
+                    <div className={styles.left}>
+                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
+                        <h2>
+                            TÁC PHẨM <br />
+                            "SỬA ĐỔI LỐI LÀM VIỆC"
+                        </h2>
+                    </div>
+                    
+                    <div className={clsx(styles.right)}>
+                        <MDBCarousel showIndicators showControls fade>
+                            <MDBCarouselInner className="rounded-2 ">
+                                {SDLLV.SLIDERS.map((item, index) => (
+                                    <MDBCarouselItem
+                                        className={clsx(styles.bannerItem, {
+                                            active: index === 0,
+                                        })}
+                                        key={index}
+                                    >
+                                        <MDBCarouselElement
+                                            src={item.imgUrl}
+                                            alt={item.title}
+                                        />
+                                        <MDBCarouselCaption>
+                                            <h5>{item.title}</h5>
+                                        </MDBCarouselCaption>
+                                    </MDBCarouselItem>
+                                ))}
+                            </MDBCarouselInner>
+                        </MDBCarousel>
+                    </div>
+                    <div className={styles.bottom} id="sua-doi-loi-lam-viec">
+                        <div className={styles['bottom-left']}></div>
+                        <a href='#sua-doi-loi-lam-viec' className={styles['bottom-right']}>{SDLLV.SECTION_TITLE}</a>
+                    </div>
+                </div>
+
+                <div
+                    className={clsx(
+                        'd-flex flex-column',
+                        styles.bluebg,
+                        styles.currEvent,
+                    )}
+                >
+                    <MDBCarousel className={styles.currEvent__body}
+                    >
+                        <div className={styles.imageShowcase}>
+                            {SDLLV.ITEMS.map((item, index) => (
                                 <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
                             ))}
                         </div>
