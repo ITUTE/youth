@@ -1,4 +1,4 @@
-export const SECTION_TITLE = 'TIỂU SỬ'
+export const SECTION_TITLE = 'TIỂU SỬ, CUỘC ĐỜI VÀ SỰ NGHIỆP CỦA CHỦ TỊCH HỒ CHÍ MINH'
 
 export const SLIDERS = [
     {

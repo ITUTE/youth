@@ -22,6 +22,7 @@ import log from 'eslint-plugin-react/lib/util/log'
 import * as TIEUSU from './tieu_su'
 import * as DISAN from './di_san'
 import * as THU_GUI_TN from './thu_gui_thanh_nien'
+import * as HINH_ANH from './hinh_anh'
 
 export default function HCM() {
 
@@ -36,7 +37,7 @@ export default function HCM() {
                     <div className={styles.left}>
                         <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
                         <h2>
-                            TIỂU SỬ VỀ CHỦ TỊCH HỒ CHÍ MINH <br />
+                            TIỂU SỬ, CUỘC ĐỜI VÀ SỰ NGHIỆP <br />
                             ANH HÙNG GIẢI PHÓNG DÂN TỘC, DANH NHÂN VĂN HÓA THẾ GIỚI
                         </h2>
                     </div>
@@ -147,8 +148,8 @@ export default function HCM() {
                 </div>
             </MDBContainer>
 
-             {/* THƯ BÁC GỬI THANH NIÊN */}
-             <MDBContainer
+            {/* THƯ BÁC GỬI THANH NIÊN */}
+            <MDBContainer
                 fluid
                 className={clsx('d-flex flex-column', styles.container)}
             >
@@ -207,6 +208,70 @@ export default function HCM() {
                 </div>
             </MDBContainer>
 
+            {/* DI SẢN */}
+            <MDBContainer
+                fluid
+                className={clsx('d-flex flex-column', styles.container)}
+            >
+                <div className={clsx(styles.banner)}>
+                    <div className={styles.left}>
+                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
+                        <h2>
+                            MỘT VÀI HÌNH ẢNH VỀ CHỦ TỊCH HỒ CHÍ MINH
+                        </h2>
+                    </div>
+                    
+                    <div className={clsx(styles.right)}>
+                        <MDBCarousel showIndicators showControls fade>
+                            <MDBCarouselInner className="rounded-2 ">
+                                {HINH_ANH.SLIDERS.map((item, index) => (
+                                    <MDBCarouselItem
+                                        className={clsx(styles.bannerItem, {
+                                            active: index === 0,
+                                        })}
+                                        key={index}
+                                    >
+                                        <MDBCarouselElement
+                                            src={item.imgUrl}
+                                            alt={item.title}
+                                        />
+                                        <MDBCarouselCaption>
+                                            <h5>{item.title}</h5>
+                                        </MDBCarouselCaption>
+                                    </MDBCarouselItem>
+                                ))}
+                            </MDBCarouselInner>
+                        </MDBCarousel>
+                    </div>
+                    <div className={styles.bottom} id="tieu-su">
+                        <div className={styles['bottom-left']}></div>
+                        <a href='#tieu-su' className={styles['bottom-right']}>{HINH_ANH.SECTION_TITLE}</a>
+                    </div>
+                </div>
+
+                <div
+                    className={clsx(
+                        'd-flex flex-column',
+                        styles.bluebg,
+                        styles.currEvent,
+                    )}
+                >
+                    <MDBCarousel className={styles.currEvent__body}
+                    >
+                        {HINH_ANH.ITEMS.map((item, index) => (
+                            <MDBCard key={index} className={styles.news__card}>   
+                                <MDBCardImage
+                                    src={item.imgUrl}
+                                    alt="..."
+                                    className={styles['news__card-image']}
+                                />
+                                <MDBCardTitle className='p-3 d-flex justify-content-center'>{item.title}</MDBCardTitle>
+                            </MDBCard>
+                            ))
+                        }
+                    </MDBCarousel>
+                </div>
+            </MDBContainer>
         </>
     )
 }

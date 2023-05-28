@@ -23,6 +23,9 @@
         background-color: #ecf6fd;
         &-image {
             border-radius: 0.625rem 0 0 0.625rem;
+            padding: 20px;
+            height: 500px;
+            object-fit: contain;
         }
         &-body {
             height: fill;
@@ -90,6 +93,20 @@
             height: 21.25rem;
             object-fit: cover;
             object-position: left;
+        }
+    }
+    &__image {
+        height: 21.25rem;
+        object-fit: cover;
+        width: 40vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 20px;
+
+        img {
+            height: 250px;
+            width: auto;
         }
     }
 }
