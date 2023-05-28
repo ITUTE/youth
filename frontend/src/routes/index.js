@@ -37,7 +37,7 @@ const routes = [
         element: <OfficeTemplate />,
     },
     {
-        path: '/ITUTE-sv5t',
+        path: '/it-sv5t',
         element: <SV5T />,
     },
     {

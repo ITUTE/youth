@@ -98,8 +98,7 @@ export default function HCM() {
                     <div className={styles.left}>
                         <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
                         <h2>
-                            BỘ SÁCH <br />
-                            "DI SẢN HỒ CHÍ MINH"
+                            BỘ SÁCH "DI SẢN HỒ CHÍ MINH"
                         </h2>
                     </div>
                     
@@ -158,8 +157,7 @@ export default function HCM() {
                     <div className={styles.left}>
                         <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
                         <h2>
-                            TÁC PHẨM <br />
-                            "SỬA ĐỔI LỐI LÀM VIỆC"
+                            TÁC PHẨM "SỬA ĐỔI LỐI LÀM VIỆC"
                         </h2>
                     </div>
                     
