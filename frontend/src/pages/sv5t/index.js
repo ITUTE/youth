@@ -1,11 +1,15 @@
 import React from 'react'
+import styles from './index.module.scss'
 
-function SV5T() {
-    return (
-        <div>
-            {document.location = 'https://itute.github.io/SV5T'}
+export default function SV5T() {
+
+    return  (
+        <div styles={styles.padlet}>
+            <div styles={{margin: 0, padding: 0, top: '100px'}}>
+                <iframe title='feedback' className='w-100' style={{height: '100vh'}} src="https://itute.github.io/SV5T" frameBorder="0" allow="camera;microphone;geolocation">
+                </iframe>
+            </div>           
         </div>
     )
+    
 }
-
-export default SV5T
