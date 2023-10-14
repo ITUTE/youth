@@ -39,6 +39,10 @@ export default function App() {
             to: '/it-sv5t',
         },
         {
+            text: 'Đăng ký Sinh viên 5 tốt',
+            to: '/dang-ky-sv5t',
+        },
+        {
             text: 'Không gian văn hóa Hồ Chí Minh',
             to: '/HCM',
         },
@@ -54,32 +58,11 @@ export default function App() {
             text: 'Về chúng tôi',
             to: '/about',
         },
-        {
-            text: 'Đăng nhập',
-            to: '/login',
-        },
+        // {
+        //     text: 'Đăng nhập',
+        //     to: '/login',
+        // },
     ])
-
-    const homeSliders = [
-        {
-            imgUrl: 'https://vtv1.mediacdn.vn/thumb_w/650/2021/11/18/tom-holland-in-spider-man-far-from-home-16372219999081867730777-crop-1637222004036539914417.jpg',
-            title: 'YEYE ANH TOM DEP TRAI',
-            content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        },
-        {
-            imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPHqUb6BqHGWVZOIQXWn5nZUKOE07s_39hrO1FKmLOKlfRY07nru4TnoF_ps6qd0O_jdQ&usqp=CAU',
-            title: 'NỮA NÈ',
-            content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        },
-        {
-            imgUrl: 'https://hiepsibaotap.com/wp-content/uploads/2018/09/8P8FOVZ-1.jpg',
-            title: 'OKE NHÌN OKE ĐÓ',
-            content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        },
-    ]
 
     return (
         <header className={styles.header}>
