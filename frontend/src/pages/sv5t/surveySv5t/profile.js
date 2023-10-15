@@ -16,10 +16,10 @@ export default function ProfileSV5T() {
     const [profile, setProfile] = React.useState({})
 
     useEffect(() => {
-        const profile = JSON.parse(localStorage.getItem('profile'))
-        console.log('profile: ', profile)
-        if (profile) {
-            setProfile(profile)
+        const data = JSON.parse(localStorage.getItem('profile'))
+        console.log('profile: ', data)
+        if (data) {
+            setProfile(data)
         }
         else {
             setProfile({

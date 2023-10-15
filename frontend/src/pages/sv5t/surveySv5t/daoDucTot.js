@@ -12,7 +12,7 @@ const SectionTitle = '⭐ Đạo đức tốt';
 
 export default function DaoDucTotSV5T() {
 
-    const [ddt, setDdt] = useState({
+    const [daoDucTot, setDaoDucTot] = useState({
         DRL: 0,
         UuTien: [
             "", // MacLenin
@@ -22,35 +22,35 @@ export default function DaoDucTotSV5T() {
     });
 
     useEffect(() => {
-        const ddt = JSON.parse(localStorage.getItem('ddt'))
-        console.log('ddt: ', ddt)
-        if (ddt) {
-            setDdt(ddt)
+        const data = JSON.parse(localStorage.getItem('DaoDucTot'))
+        console.log('DaoDucTot: ', data)
+        if (data) {
+            setDaoDucTot(data)
         }
     }, [])
     
     useEffect(() => {
-        console.log(ddt)
-        localStorage.setItem('ddt', JSON.stringify(ddt))
-    }, [ddt])
+        console.log(daoDucTot)
+        localStorage.setItem('DaoDucTot', JSON.stringify(daoDucTot))
+    }, [daoDucTot])
     
     const setMacLenin = (event) => {
-        let temp = ddt.UuTien
+        let temp = daoDucTot.UuTien
         console.log(temp)
         temp[0] = event.target.value
-        setDdt({ ...ddt, UuTien: temp })
+        setDaoDucTot({ ...daoDucTot, UuTien: temp })
     }
 
     const setThamLuan = (event) => {
-        let temp = ddt.UuTien
+        let temp = daoDucTot.UuTien
         temp[1] = event.target.value
-        setDdt({ ...ddt, UuTien: temp })
+        setDaoDucTot({ ...daoDucTot, UuTien: temp })
     }
 
     const setSvTieuBieu = (event) => {
-        let temp = ddt.UuTien
+        let temp = daoDucTot.UuTien
         temp[2] = event.target.value
-        setDdt({ ...ddt, UuTien: temp })
+        setDaoDucTot({ ...daoDucTot, UuTien: temp })
     }
 
     return (
@@ -68,8 +68,8 @@ export default function DaoDucTotSV5T() {
                     <span><em>Điểm rèn luyện trung bình của năm học 2020 - 2021.</em></span>
                     <input className="form-control" type="number" min="0" max="100" step="0.1"
                         id="drl" autoComplete="on" required={true} placeholder="VD: 95.0"
-                        value={ddt.DRL}
-                        onChange={(event) => setDdt({ ...ddt, DRL: event.target.value })} />
+                        value={daoDucTot.DRL}
+                        onChange={(event) => setDaoDucTot({ ...daoDucTot, DRL: event.target.value })} />
                 </fieldset>
 
                 <h5 className="text-black-50" style={{ margin: "20px" }}><strong># Tiêu chuẩn ưu tiên</strong></h5>
@@ -79,8 +79,8 @@ export default function DaoDucTotSV5T() {
                     <legend className="fw-bold">2.1. Là thành viên chính thức của đội thi tìm hiểu về chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp Trường trở lên:</legend>
                     <span><em>Nếu không, vui lòng điền "Không".</em></span>
                     <textarea className="form-control" 
-                        id="ddt-1" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
-                        value={ddt.UuTien[0]}
+                        id="DaoDucTot-1" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
+                        value={daoDucTot.UuTien[0]}
                         onChange={setMacLenin}></textarea>
                 </fieldset>
 
@@ -88,8 +88,8 @@ export default function DaoDucTotSV5T() {
                     <legend className="fw-bold">2.2. Có tham luận, bài viết được trình bày tại các diễn đàn học thuật về các môn khoa học Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp Trường trở lên:</legend>
                     <span><em>Ghi rõ tên tham luận, diễn đàn nào, cấp tổ chức, thời gian tổ chức.</em></span>
                     <textarea className="form-control" 
-                        id="ddt-2" required={true} wrap="soft" spellCheck="true" rows="3" placeholder="VD: Không."
-                        value={ddt.UuTien[1]}
+                        id="DaoDucTot-2" required={true} wrap="soft" spellCheck="true" rows="3" placeholder="VD: Không."
+                        value={daoDucTot.UuTien[1]}
                         onChange={setThamLuan}></textarea>
                 </fieldset>
 
@@ -97,8 +97,8 @@ export default function DaoDucTotSV5T() {
                     <legend className="fw-bold">2.3. Là thanh niên/ sinh viên tiêu biểu trong các lĩnh vực, thanh niên tiên tiến làm theo lời Bác, gương người tốt, việc tốt, có hành động dũng cảm cứu người được các cấp ghi nhận, biểu dương, khen thưởng hoặc nêu gương qua các phương tiện thông tin đại chúng:</legend>
                     <span><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương hoặc đường dẫn đến phương tiện thông tin đại chúng đăng bài biểu dương.</em></span>
                     <textarea className="form-control" 
-                        id="ddt-3" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
-                        value={ddt.UuTien[2]}
+                        id="DaoDucTot-3" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
+                        value={daoDucTot.UuTien[2]}
                         onChange={setSvTieuBieu}></textarea>
                 </fieldset>
             </div>
