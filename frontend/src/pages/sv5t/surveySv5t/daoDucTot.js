@@ -8,7 +8,8 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Đạo đức tốt';
+export const SectionTitle = '⭐ Đạo đức tốt';
+export const DataKey = 'DaoDucTot';
 
 export default function DaoDucTotSV5T() {
 
@@ -22,21 +23,20 @@ export default function DaoDucTotSV5T() {
     });
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('DaoDucTot'))
-        console.log('DaoDucTot: ', data)
+        const data = JSON.parse(localStorage.getItem(DataKey))
+        // console.log('DaoDucTot: ', data)
         if (data) {
             setDaoDucTot(data)
         }
     }, [])
     
     useEffect(() => {
-        console.log(daoDucTot)
-        localStorage.setItem('DaoDucTot', JSON.stringify(daoDucTot))
+        // console.log(daoDucTot)
+        localStorage.setItem(DataKey, JSON.stringify(daoDucTot))
     }, [daoDucTot])
     
     const setMacLenin = (event) => {
         let temp = daoDucTot.UuTien
-        console.log(temp)
         temp[0] = event.target.value
         setDaoDucTot({ ...daoDucTot, UuTien: temp })
     }

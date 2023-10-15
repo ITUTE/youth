@@ -8,23 +8,24 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Tình nguyện tốt';
+export const SectionTitle = '⭐ Tình nguyện tốt';
+export const DataKey = 'TinhNguyenTot';
 
 export default function TinhNguyenTotSV5T() {
 
     const [tinhNguyenTot, setTinhNguyenTot] = useState({})
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('tinhNguyenTot'))
-        console.log('tinhNguyenTot: ', data)
+        const data = JSON.parse(localStorage.getItem(DataKey))
+        // console.log('TinhNguyenTot: ', data)
         if (data) {
             setTinhNguyenTot(data)
         }
     }, [])
 
     useEffect(() => {
-        console.log(tinhNguyenTot)
-        localStorage.setItem('tinhNguyenTot', JSON.stringify(tinhNguyenTot))
+        // console.log(tinhNguyenTot)
+        localStorage.setItem(DataKey, JSON.stringify(tinhNguyenTot))
     }, [tinhNguyenTot])
 
     return (

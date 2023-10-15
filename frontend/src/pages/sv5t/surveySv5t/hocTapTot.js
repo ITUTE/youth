@@ -8,7 +8,8 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Học tập tốt';
+export const SectionTitle = '⭐ Học tập tốt';
+export const DataKey = 'HocTapTot';
 
 export default function HocTapTotSV5T() {
 
@@ -18,16 +19,16 @@ export default function HocTapTotSV5T() {
     });
 
     useEffect(() => {
-        const hocTapTot = JSON.parse(localStorage.getItem('hocTapTot'))
-        console.log('hocTapTot: ', hocTapTot)
+        const hocTapTot = JSON.parse(localStorage.getItem(DataKey))
+        // console.log('HocTapTot: ', hocTapTot)
         if (hocTapTot) {
             setHocTapTot(hocTapTot)
         }
     }, [])
 
     useEffect(() => {
-        console.log(hocTapTot)
-        localStorage.setItem('hocTapTot', JSON.stringify(hocTapTot))
+        // console.log(hocTapTot)
+        localStorage.setItem(DataKey, JSON.stringify(hocTapTot))
     }, [hocTapTot])
 
     const checkSelected = (value) => {

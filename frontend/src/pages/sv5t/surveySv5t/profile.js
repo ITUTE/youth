@@ -9,15 +9,16 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Thông tin chung'
+export const SectionTitle = '⭐ Thông tin chung'
+export const DataKey = 'Profile'
 
 export default function ProfileSV5T() {
 
     const [profile, setProfile] = React.useState({})
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('profile'))
-        console.log('profile: ', data)
+        const data = JSON.parse(localStorage.getItem(DataKey))
+        // console.log('Profile: ', data)
         if (data) {
             setProfile(data)
         }
@@ -29,8 +30,8 @@ export default function ProfileSV5T() {
     }, [])
 
     useEffect(() => {
-        console.log(profile)
-        localStorage.setItem('profile', JSON.stringify(profile))
+        // console.log(profile)
+        localStorage.setItem(DataKey, JSON.stringify(profile))
     }, [profile])
 
     return (

@@ -9,7 +9,8 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Hội nhập tốt';
+export const SectionTitle = '⭐ Hội nhập tốt';
+export const DataKey = 'HoiNhapTot';
 
 export default function HoiNhapTotSV5T() {
 
@@ -19,16 +20,16 @@ export default function HoiNhapTotSV5T() {
     })
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('hoiNhapTot'))
-        console.log('hoiNhapTot: ', data)
+        const data = JSON.parse(localStorage.getItem(DataKey))
+        // console.log('HoiNhapTot: ', data)
         if (data) {
             setHoiNhapTot(data)
         }
     }, [])
 
     useEffect(() => {
-        console.log(hoiNhapTot)
-        localStorage.setItem('hoiNhapTot', JSON.stringify(hoiNhapTot))
+        // console.log(hoiNhapTot)
+        localStorage.setItem(DataKey, JSON.stringify(hoiNhapTot))
     }, [hoiNhapTot])
 
     return (

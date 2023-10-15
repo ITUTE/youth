@@ -8,23 +8,24 @@ const sectionStyle = {
     padding: '1rem 0',
 }
 
-const SectionTitle = '⭐ Thể lực tốt';
+export const SectionTitle = '⭐ Thể lực tốt';
+export const DataKey = 'TheLucTot';
 
 export default function TheLucTotSV5T() {
 
     const [theLucTot, setTheLucTot] = useState({});
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('theLucTot'));
-        console.log('theLucTot: ', data)
+        const data = JSON.parse(localStorage.getItem(DataKey));
+        // console.log('TheLucTot: ', data)
         if (data) {
             setTheLucTot(data);
         }
     }, [])
 
     useEffect(() => {
-        console.log(theLucTot);
-        localStorage.setItem('theLucTot', JSON.stringify(theLucTot));
+        // console.log(theLucTot);
+        localStorage.setItem(DataKey, JSON.stringify(theLucTot));
     }, [theLucTot])
 
     return (
