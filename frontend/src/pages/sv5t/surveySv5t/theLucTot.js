@@ -34,13 +34,13 @@ export default function TheLucTotSV5T() {
                 <hr />
             </div>
 
-            <div class="row" id="the-luc-tot" >
+            <div className="row" id="the-luc-tot" >
                 <h5 className="text-danger bg-info text-white ml-3 mr-3">Đạt ít nhất 01 trong các tiêu chí sau:</h5>
 
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">3.1. Đạt danh hiệu "Thanh niên khỏe" trong năm học 2022 - 2023:</legend>
                     <span><em>Ghi rõ thời gian nhận chứng nhận. Nếu không có, vui lòng ghi "</em><strong>Không</strong>.<em>"</em></span>
-                    <textarea class="form-control"
+                    <textarea className="form-control"
                         id="tlt-1" required={true} wrap="soft" spellcheck="true" rows="3"
                         placeholder="VD: Đạt danh hiệu Thanh niên khỏe cấp trường năm 2023."
                         value={theLucTot.ThanhNienKhoe}
@@ -50,7 +50,7 @@ export default function TheLucTotSV5T() {
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">3.2. Tham gia các hoạt động thể dục thể thao, giải chạy, hội thao sinh viên (trừ thể thao điện tử) từ cấp Trường trở lên và đạt giấy chứng nhận:</legend>
                     <span><em>Ghi rõ thời gian nhận chứng nhận. Nếu không có, vui lòng ghi "</em><strong>Không</strong>.<em>"</em></span>
-                    <textarea class="form-control"
+                    <textarea className="form-control"
                         id="tlt-2" required={true} wrap="soft" spellcheck="true" rows="3"
                         placeholder="VD: Không."
                         value={theLucTot.HoiThaoTdtt}
@@ -60,7 +60,7 @@ export default function TheLucTotSV5T() {
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">3.3. Là thành viên đội tuyển cấp trường, thành phố các môn thể dục thể thao:</legend>
                     <span><em>Ưu tiên những sinh viên là vận động viên đạt huy chương trong các giải thi đấu cấp quốc gia, khu vực và quốc tế.</em></span>
-                    <textarea class="form-control"
+                    <textarea className="form-control"
                         id="tlt-3" required={true} wrap="soft" spellcheck="true" rows="3"
                         placeholder="VD: Không."
                         value={theLucTot.DoiTuyenTheThao}
@@ -70,7 +70,7 @@ export default function TheLucTotSV5T() {
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">3.4. Đối với những sinh viên khuyết tật có giấy xác nhận được miễn tiêu chuẩn này:</legend>
                     <span><em>Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span>
-                    <textarea class="form-control"
+                    <textarea className="form-control"
                         id="tlt-4" required={true} rows="3" wrap="soft" spellcheck="true"
                         placeholder="VD: Không."
                         value={theLucTot.SvKhuyetTat}
