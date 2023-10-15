@@ -5,7 +5,7 @@ export default function SV5T() {
 
     return  (
         <div styles={styles.padlet}>
-            <div styles={{margin: 0, padding: 0, top: '100px'}}>
+            <div>
                 <iframe title='sv5t' className='w-100' style={{height: '100vh'}} src="https://itute.github.io/SV5T">
                 </iframe>
             </div>           
