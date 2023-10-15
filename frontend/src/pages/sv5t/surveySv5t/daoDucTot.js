@@ -15,11 +15,7 @@ export default function DaoDucTotSV5T() {
 
     const [daoDucTot, setDaoDucTot] = useState({
         DRL: 0,
-        UuTien: [
-            "", // MacLenin
-            "", // ThamLuan
-            "", // SvTieuBieu
-        ]
+        UuTien: {}
     });
 
     useEffect(() => {
@@ -34,24 +30,6 @@ export default function DaoDucTotSV5T() {
         // console.log(daoDucTot)
         localStorage.setItem(DataKey, JSON.stringify(daoDucTot))
     }, [daoDucTot])
-    
-    const setMacLenin = (event) => {
-        let temp = daoDucTot.UuTien
-        temp[0] = event.target.value
-        setDaoDucTot({ ...daoDucTot, UuTien: temp })
-    }
-
-    const setThamLuan = (event) => {
-        let temp = daoDucTot.UuTien
-        temp[1] = event.target.value
-        setDaoDucTot({ ...daoDucTot, UuTien: temp })
-    }
-
-    const setSvTieuBieu = (event) => {
-        let temp = daoDucTot.UuTien
-        temp[2] = event.target.value
-        setDaoDucTot({ ...daoDucTot, UuTien: temp })
-    }
 
     return (
         <section className='container' style={sectionStyle}>
@@ -80,8 +58,9 @@ export default function DaoDucTotSV5T() {
                     <span><em>Nếu không, vui lòng điền "Không".</em></span>
                     <textarea className="form-control" 
                         id="DaoDucTot-1" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
-                        value={daoDucTot.UuTien[0]}
-                        onChange={setMacLenin}></textarea>
+                        value={daoDucTot.UuTien.DoiTuyenMacLenin}
+                        onChange={(event) => setDaoDucTot({ ...daoDucTot, UuTien: { ...daoDucTot.UuTien, DoiTuyenMacLenin: event.target.value } })}
+                        ></textarea>
                 </fieldset>
 
                 <fieldset style={{ margin: "10px" }}>
@@ -89,8 +68,9 @@ export default function DaoDucTotSV5T() {
                     <span><em>Ghi rõ tên tham luận, diễn đàn nào, cấp tổ chức, thời gian tổ chức.</em></span>
                     <textarea className="form-control" 
                         id="DaoDucTot-2" required={true} wrap="soft" spellCheck="true" rows="3" placeholder="VD: Không."
-                        value={daoDucTot.UuTien[1]}
-                        onChange={setThamLuan}></textarea>
+                        value={daoDucTot.UuTien.ThamLuanMacLenin}
+                        onChange={(event) => setDaoDucTot({ ...daoDucTot, UuTien: { ...daoDucTot.UuTien, ThamLuanMacLenin: event.target.value } })}
+                        ></textarea>
                 </fieldset>
 
                 <fieldset style={{ margin: "10px" }}>
@@ -98,8 +78,8 @@ export default function DaoDucTotSV5T() {
                     <span><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương hoặc đường dẫn đến phương tiện thông tin đại chúng đăng bài biểu dương.</em></span>
                     <textarea className="form-control" 
                         id="DaoDucTot-3" rows="3" spellCheck="true" wrap="soft" required={true} placeholder="VD: Không."
-                        value={daoDucTot.UuTien[2]}
-                        onChange={setSvTieuBieu}></textarea>
+                        value={daoDucTot.UuTien.GuongTuyenDuong}
+                        onChange={(event) => setDaoDucTot({ ...daoDucTot, UuTien: { ...daoDucTot.UuTien, GuongTuyenDuong: event.target.value } })}></textarea>
                 </fieldset>
             </div>
         </section>
