@@ -1,4 +1,3 @@
-import { event } from 'jquery';
 import React, { useState, useEffect } from 'react'
 
 const titleStyle = {
