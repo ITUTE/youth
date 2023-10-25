@@ -115,6 +115,7 @@ export default function SurveySV5T() {
                 if (response.success === true) {
                     setToastMessage('Đã lưu dữ liệu thành công!')
                     setShowToast(true)
+                    resetData()
                 } else {
                     setToastMessage('Đã có lỗi xảy ra! Vui lòng thử lại sau.')
                     setShowToast(true)

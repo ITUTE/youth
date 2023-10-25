@@ -113,7 +113,7 @@ export default function HocTapTotSV5T() {
                     </div>
                     <textarea className="form-control"
                         id="HocTapTot-202" rows="3" required={true} spellCheck="true" wrap="soft"
-                        placeholder="VD: BTC cuộc thi học thuật Hackathon 2020, khoa Công nghệ Thông tin."
+                        placeholder="VD: BTC cuộc thi học thuật Hackathon 2023, khoa Công nghệ Thông tin."
                         value={hocTapTot.Khac.K202_CuocThiHocThuat}
                         onChange={(event) => setHocTapTot({ ...hocTapTot, Khac: { ...hocTapTot.Khac, K202_CuocThiHocThuat: event.target.value } })} >
                     </textarea>
