@@ -43,7 +43,7 @@ export default function DaoDucTotSV5T() {
 
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">1. Điểm rèn luyện:</legend>
-                    <span><em>Điểm rèn luyện trung bình của năm học 2020 - 2021.</em></span>
+                    <span><em>Điểm rèn luyện trung bình của năm học 2022 - 2023.</em></span>
                     <input className="form-control" type="number" min="0" max="100" step="0.1"
                         id="drl" autoComplete="on" required={true} placeholder="VD: 95.0"
                         value={daoDucTot.DRL}

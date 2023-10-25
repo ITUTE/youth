@@ -50,7 +50,7 @@ export default function HoiNhapTotSV5T() {
                     <span>Chấp nhận minh chứng Anh văn Đầu ra trong trường, các chứng nhận, chứng chỉ ngoại ngữ do Trung tâm ngoại ngữ của trường tổ chức, giấy chứng nhận thi thử được cấp bởi các Trung tâm ngoại ngữ.</span>
                     <textarea className="form-control"
                         id="hnt-101" required={true} spellcheck="true" wrap="soft" rows="3"
-                        placeholder="VD: Đạt TOEIC 625, thi ngày 18/11/2020."
+                        placeholder="VD: Đạt TOEIC 625, thi ngày 18/09/2023."
                         value={hoiNhapTot.NgoaiNgu.ChungChiNgoaiNgu}
                         onChange={(event) => setHoiNhapTot({ ...hoiNhapTot, NgoaiNgu: { ...hoiNhapTot.NgoaiNgu, ChungChiNgoaiNgu: event.target.value } })}></textarea>
                 </fieldset>
