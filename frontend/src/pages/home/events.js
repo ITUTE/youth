@@ -1,10 +1,10 @@
 export const EVENTS_2022_2023 = [
-    {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685123778/2022-2023/mit-2023_wi5e6f.webp',
+   {
+        imgUrl: 'https://drive.google.com/uc?export=view&id=12OrXJRydUUleMpZj1BCfPh2_i97OxPp0',
         // title: 'MASTERING IT 2023',
     },
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685179800/2022-2023/mhx-2023.jpg',
+        imgUrl: 'https://drive.google.com/uc?export=view&id=1vOqUzAdrisCBJfv3r6eha5p2_mO6ug0k',
         // title: 'MÙA HÈ XANH 2023',
     },
     // {
