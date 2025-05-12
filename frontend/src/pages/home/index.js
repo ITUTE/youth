@@ -25,13 +25,13 @@ export default function Home() {
     const homeSliders = [
         {
             imgUrl: 'https://drive.google.com/file/d/1lMQrkBkaVAicIZ9qpvtkqjpvWUSntNNr/view?usp=sharing',
-            title: 'HACKATHON 2024',
+            title: 'HACKATHON',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
         {
             imgUrl: 'https://drive.google.com/file/d/1d0_XAhK_ApVu1h-7jWz7TjL08n8xEg5H/view?usp=sharing',
-            title: 'SÓNG IT - ITSHOW',
+            title: 'SÓNG IT - IT SHOW',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
@@ -55,9 +55,8 @@ export default function Home() {
                         HỘI SINH VIÊN
                     </h1>
                     <h2>
-                        KHOA CÔNG NGHỆ THÔNG TIN - 
-                        TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT 
-                        THÀNH PHỐ HỒ CHÍ MINH
+                        KHOA CÔNG NGHỆ THÔNG TIN - TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ
+                        THUẬT THÀNH PHỐ HỒ CHÍ MINH
                     </h2>
                 </div>
                 <div className={clsx(styles.right)}>
