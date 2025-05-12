@@ -24,19 +24,19 @@ import * as HIGHTLIGHT from './hightlight_events'
 export default function Home() {
     const homeSliders = [
     {
-        imgUrl: 'https://drive.google.com/uc?export=view&id=1lMQrkBkaVAicIZ9qpvtkqjpvWUSntNNr',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085352/HACKATHON_e2z65j.jpg',
         title: 'HACKATHON',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-        imgUrl: 'https://drive.google.com/uc?export=view&id=1d0_XAhK_ApVu1h-7jWz7TjL08n8xEg5H',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085785/%E1%BA%A2nh_ch%E1%BB%A5p_m%C3%A0n_h%C3%ACnh_2025-05-13_043605_jrmp91.png',
         title: 'SÓNG IT - IT SHOW',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-        imgUrl: 'https://drive.google.com/uc?export=view&id=1JnDyFpYNazhrC0yTSSfxZeXQL5ZCkfCf',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085352/XTN2025_jfzarm.jpg',
         title: 'XTN 2025',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
