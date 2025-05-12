@@ -1,7 +1,7 @@
 export const HIGHTLIGHT_2022_2023 = [
     [
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685179910/2022-2023/MIT-2023.jpg',
+            imgUrl: 'https://drive.google.com/file/d/1lMQrkBkaVAicIZ9qpvtkqjpvWUSntNNr/view?usp=sharing',
             title: 'MASTERING IT 2023',
         },
         {

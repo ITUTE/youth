@@ -24,20 +24,20 @@ import * as HIGHTLIGHT from './hightlight_events'
 export default function Home() {
     const homeSliders = [
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648145499/2020-2021/Xu%C3%A2n%20t%C3%ACnh%20nguy%E1%BB%87n%202021/Xu%C3%A2n_t%C3%ACnh_nguy%E1%BB%87n_2021_kk3pq9.jpg',
-            title: 'XTN 2021',
+            imgUrl: 'https://drive.google.com/file/d/1lMQrkBkaVAicIZ9qpvtkqjpvWUSntNNr/view?usp=sharing',
+            title: 'HACKATHON 2024',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648147095/2020-2021/Hackathon/Hackathon_2020_nsfbso.jpg',
-            title: 'Hackathon 2022',
+            imgUrl: 'https://drive.google.com/file/d/1d0_XAhK_ApVu1h-7jWz7TjL08n8xEg5H/view?usp=sharing',
+            title: 'SÓNG IT - ITSHOW',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
         {
-            imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648147033/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/Tuyen_duong_SV5T_oepslz.jpg',
-            title: 'SV5T',
+            imgUrl: 'https://drive.google.com/file/d/1JnDyFpYNazhrC0yTSSfxZeXQL5ZCkfCf/view?usp=sharing',
+            title: 'XTN 2025',
             content:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         },
@@ -55,8 +55,9 @@ export default function Home() {
                         HỘI SINH VIÊN
                     </h1>
                     <h2>
-                        KHOA CÔNG NGHỆ THÔNG TIN - TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ
-                        THUẬT THÀNH PHỐ HỒ CHÍ MINH
+                        KHOA CÔNG NGHỆ THÔNG TIN - 
+                        TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT 
+                        THÀNH PHỐ HỒ CHÍ MINH
                     </h2>
                 </div>
                 <div className={clsx(styles.right)}>
