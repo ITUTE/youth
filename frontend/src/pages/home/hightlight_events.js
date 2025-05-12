@@ -1,57 +1,57 @@
 export const HIGHTLIGHT_2022_2023 = [
     [
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1JptQLCtTSRqITiJNGtQsw50BCSiIsNCe',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085574/CTF_HCMUTE_2024_j1vsjt.jpg',
             title: 'CTF',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1zB5HPi24c5tZn7qcfiYD3RGdpk_Su7cq',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085575/CV_CONTEST_2025_uw83ot.jpg',
             title: 'CV CONTEST',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1V6ERKZoHQKJ1zofZhvS3xK0b5MNf0tZw',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085575/%C4%90%E1%BA%A0I_H%E1%BB%98I_HSV_KHOA_CNTT_HCMUTE_gskkl3.jpg',
             title: 'ĐẠI HỘI VIII',
         },
     ],
     [
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1kqIHOdcWph6qHBihyVgQNGDSoKehMjAt',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085578/HAKATHON2025_curxct.jpg',
             title: 'HACKATHON 2025',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1iI45_Td5SOoA3QtkKYcoGy8xhhBo5gOM',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085578/L%E1%BB%84_NH%E1%BA%ACP_M%C3%94N_2024_ogceyn.jpg',
             title: 'CHÀO ĐÓN TÂN SINH VIÊN',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1lx0g-2F3HjEBn1oPpFG1Bp0afm8-gd9Y',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085579/MASTERING_IT_2025_d0kodz.jpg',
             title: 'MIT 2025',
         },
     ],
     [
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1lVdq4YYvXQlC064RAGFvINxLy1Bcpk3m',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085582/M%C3%99A_H%C3%88_XANH_2024_n4zy93.jpg',
             title: 'MÙA HÈ XANH',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1oniLLiKsnh_2LdmgF0Nx8qX90qDacNfu',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085580/NH%E1%BA%ACP_M%C3%94N_L%E1%BA%ACP_TR%C3%8CNH_2024_urrkb6.jpg',
             title: 'ÔN TẬP MÙA THI',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1zgBunJN5rscRZmBVnmOefkyX2CkasVUs',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085580/S%C3%93NG_IT_2025_uacxtx.jpg',
             title: 'SÓNG IT',
         },
     ],
     [
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1ppDZSMn8J_O4afOzIFFCPilk8yERd4JX',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085580/TR%E1%BA%A0I_K%E1%BB%B8_N%C4%82NG_2024_oibgfv.jpg',
             title: 'TRẠI KỸ NĂNG',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1FJ5DKZoF0fPLoXneNsrnRrqcnRiJZTEk',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085574/TRI_%C3%82N_TH%E1%BA%A6Y_C%C3%94_2024_quua1b.jpg',
             title: 'TRI ÂN THẦY CÔ',
         },
         {
-            imgUrl: 'https://drive.google.com/uc?export=view&id=1NSH7J03nFEZhNgiJY85oQQgcbr--Onkj',
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747085574/XU%C3%82N_T%C3%8CNH_NGUY%E1%BB%86N_2025_qfgkak.jpg',
             title: 'XUÂN TÌNH NGUYỆN',
         },
     ],
