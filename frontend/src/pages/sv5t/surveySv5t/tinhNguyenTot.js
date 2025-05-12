@@ -40,18 +40,18 @@ export default function TinhNguyenTotSV5T() {
                 <h5 className="text-danger bg-info text-white ml-3 mr-3">Đạt ít nhất 01 trong các tiêu chí sau:</h5>
 
                 <fieldset style={{ margin: "10px" }}>
-                    <legend className="fw-bold">4.1. Tham gia và nhận giấy chứng nhận hoàn thành đầy đủ một trong các chương trình, chiến dịch sau: Chiến dịch Xuân tình nguyện 2023, Chương trình Tiếp sức mùa thi 2023 và Chiến dịch Mùa hè xanh 2023:</legend>
+                    <legend className="fw-bold">4.1. Tham gia và nhận giấy chứng nhận hoàn thành đầy đủ một trong các chương trình, chiến dịch sau: Chiến dịch Xuân tình nguyện 2025, Chương trình Tiếp sức mùa thi 2025 và Chiến dịch Mùa hè xanh 2024:</legend>
                     <span><em>Đối với trường hợp chỉ tham gia gây quỹ không được tính vào tiêu chí này.</em></span>
                     <textarea className="form-control"
                         id="tnt-1" required={true} rows="3" spellcheck="true" wrap="soft"
-                        placeholder="VD: Tham gia chiến dịch &quot;Xuân tình nguyện 2023&quot; khoa Công nghệ Thông tin."
+                        placeholder="VD: Tham gia chiến dịch &quot;Xuân tình nguyện 2024&quot; khoa Công nghệ Thông tin."
                         value={tinhNguyenTot.ChienDichTinhNguyen}
                         onChange={(event) => setTinhNguyenTot({ ...tinhNguyenTot, ChienDichTinhNguyen: event.target.value })}></textarea>
                 </fieldset>
 
                 <fieldset style={{ margin: "10px" }}>
                     <legend className="fw-bold">4.2. Tham gia và đạt được ít nhất 25 điểm công tác xã hội/ năm học:</legend>
-                    <span><em>Ghi tổng số điểm CTXH đã đạt trong năm học 2022 - 2023.</em></span>
+                    <span><em>Ghi tổng số điểm CTXH đã đạt trong năm học 2024 - 2025.</em></span>
                     <input className="form-control" type="text"
                         id="tnt-2" required={true} placeholder="VD: 30.0"
                         value={tinhNguyenTot.DiemCtxh}

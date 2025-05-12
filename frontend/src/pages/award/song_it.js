@@ -1,7 +1,7 @@
 export const homeSliders_SongIT = [
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648235678/2021-2022/S%C3%B3ng%20IT/SongIT_kcxuts.jpg',
-        title: 'Sóng IT 2021',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747088490/483526791_648356701176984_167459529191352972_n_nfgtrf.jpg',
+        title: 'Sóng IT 2025',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
@@ -9,10 +9,10 @@ export const homeSliders_SongIT = [
 
 export const SongIT_2021_2022 = [
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648235293/2021-2022/S%C3%B3ng%20IT/BG_CH%C3%8DNH_S%C3%93NG_IT_4x_gko1ry.jpg',
-        title: 'SÓNG IT - TUYÊN DƯƠNG GƯƠNG ĐIỂN HÌNH TUỔI TRẺ CÔNG NGHỆ THÔNG TIN 2021',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747088479/484002924_648356951176959_965751540522382791_n_saotmw.jpg',
+        title: 'SÓNG IT - TUYÊN DƯƠNG GƯƠNG ĐIỂN HÌNH TUỔI TRẺ CÔNG NGHỆ THÔNG TIN 2025',
         content:
-            '🎉 Nhằm vinh danh các cá nhân, tập thể có nhiều đóng góp trong các lĩnh vực, hoạt động, Đoàn - Hội Khoa Công nghệ thông tin xin tổ chức chương trình "SÓNG IT - Tuyên dương Gương điển hình tuổi trẻ Công nghệ Thông tin 2021"...',
+            '🎉 Nhằm vinh danh các cá nhân, tập thể có nhiều đóng góp trong các lĩnh vực, hoạt động, Đoàn - Hội Khoa Công nghệ thông tin xin tổ chức chương trình "SÓNG IT - Tuyên dương Gương điển hình tuổi trẻ Công nghệ Thông tin 2025"...',
     }
 ]
 
