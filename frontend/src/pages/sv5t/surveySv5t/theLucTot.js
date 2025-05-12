@@ -39,11 +39,11 @@ export default function TheLucTotSV5T() {
                 <h5 className="text-danger bg-info text-white ml-3 mr-3">Đạt ít nhất 01 trong các tiêu chí sau:</h5>
 
                 <fieldset style={{ margin: "10px" }}>
-                    <legend className="fw-bold">3.1. Đạt danh hiệu "Thanh niên khỏe" trong năm học 2022 - 2023:</legend>
+                    <legend className="fw-bold">3.1. Đạt danh hiệu "Thanh niên khỏe" trong năm học 2023 - 2024:</legend>
                     <span><em>Ghi rõ thời gian nhận chứng nhận. Nếu không có, vui lòng ghi "</em><strong>Không</strong>.<em>"</em></span>
                     <textarea className="form-control"
                         id="tlt-1" required={true} wrap="soft" spellcheck="true" rows="3"
-                        placeholder="VD: Đạt danh hiệu Thanh niên khỏe cấp trường năm 2023."
+                        placeholder="VD: Đạt danh hiệu Thanh niên khỏe cấp trường năm 2024."
                         value={theLucTot.ThanhNienKhoe}
                         onChange={(event) => setTheLucTot({ ...theLucTot, ThanhNienKhoe: event.target.value })}></textarea>
                 </fieldset>

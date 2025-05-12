@@ -57,13 +57,13 @@ export default function About() {
                 {/* BCH ĐOÀN KHOA*/}
                 <div className={clsx('d-flex flex-column', styles.news)}>
                     <SessionHeader title="BAN CHẤP HÀNH ĐOÀN KHOA CÔNG NGHỆ THÔNG TIN" />
-                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175681/2022-2023/bch-doan-khoa.png" alt="" loading="lazy"/>
+                    <img src="https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086498/Slide.pptx_vgjo07.png" alt="" loading="lazy"/>
                 </div>
 
                 {/* BCH LCH KHOA*/}
                 <div className={clsx('d-flex flex-column', styles.news)}>
                     <SessionHeader title="BAN CHẤP HÀNH LIÊN CHI HỘI KHOA CÔNG NGHỆ THÔNG TIN" />
-                    <img src="https://res.cloudinary.com/yitute/image/upload/v1685175734/2022-2023/bch-lch.png" alt="" loading="lazy"/>
+                    <img src="https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086495/RA_M%E1%BA%AET_BAN_CH%E1%BA%A4P_H%C3%80NH_LI%C3%8AN_CHI_H%E1%BB%98I_KHOA_C%C3%94NG_NGH%E1%BB%86_TH%C3%94NG_TIN_KH%C3%93A_VIII_NHI%E1%BB%86M_K%E1%BB%B2_2025_-_2028_jlgg9g.png" alt="" loading="lazy"/>
                 </div>
 
                 <div

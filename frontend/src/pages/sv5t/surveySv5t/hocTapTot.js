@@ -53,7 +53,7 @@ export default function HocTapTotSV5T() {
                 <h5 className="text-black-50" style={{ margin: "20px" }}><strong># Tiêu chuẩn bắt buộc</strong></h5>
 
                 <fieldset style={{ margin: "10px" }}>
-                    <legend className="fw-bold">1.1. Không nợ môn, học phần hoặc tín chỉ trong năm học 2022 - 2023 (không rớt môn trong năm học):</legend>
+                    <legend className="fw-bold">1.1. Không nợ môn, học phần hoặc tín chỉ trong năm học 2024 - 2025 (không rớt môn trong năm học):</legend>
                     <div className='form-check'>
                         <div className='p-2'>
                             <input className='form-check-input' type="radio"
@@ -83,7 +83,7 @@ export default function HocTapTotSV5T() {
                 </fieldset>
 
                 <fieldset style={{ margin: "10px" }}>
-                    <legend className="fw-bold">1.3. Điểm trung bình chung học tập cả năm 2022 - 2023 (đạt từ 7.5/10 trở lên):</legend>
+                    <legend className="fw-bold">1.3. Điểm trung bình chung học tập cả năm 2024 - 2025 (đạt từ 7.5/10 trở lên):</legend>
                     <p>
                         <strong><em>Lưu ý:&nbsp;</em></strong>
                         <span className="">Điểm trung bình tính theo hệ số tín chỉ (lấy đến 2 chữ số sau dấu chấm thập phân).</span>
@@ -113,7 +113,7 @@ export default function HocTapTotSV5T() {
                     </div>
                     <textarea className="form-control"
                         id="HocTapTot-202" rows="3" required={true} spellCheck="true" wrap="soft"
-                        placeholder="VD: BTC cuộc thi học thuật Hackathon 2023, khoa Công nghệ Thông tin."
+                        placeholder="VD: BTC cuộc thi học thuật Hackathon 2025, khoa Công nghệ Thông tin."
                         value={hocTapTot.Khac.K202_CuocThiHocThuat}
                         onChange={(event) => setHocTapTot({ ...hocTapTot, Khac: { ...hocTapTot.Khac, K202_CuocThiHocThuat: event.target.value } })} >
                     </textarea>
@@ -228,7 +228,7 @@ export default function HocTapTotSV5T() {
                     <span><em>Ghi rõ tên cuộc thi, đội tuyển, cấp tổ chức của cuộc thi, giải thưởng đạt được.</em></span>
                     <textarea className="form-control"
                         id="HocTapTot-212" required={true} rows="3" spellCheck="true" wrap="soft"
-                        placeholder="VD: Thành viên đội tuyển tham gia dự thi cuộc thi học thuật &quot;Sinh viên với An toàn thông tin ASEAN 2023&quot;."
+                        placeholder="VD: Thành viên đội tuyển tham gia dự thi cuộc thi học thuật &quot;Sinh viên với An toàn thông tin ASEAN 2025&quot;."
                         value={hocTapTot.Khac.K212_DoiTuyenQG}
                         onChange={(event) => setHocTapTot({ ...hocTapTot, Khac: { ...hocTapTot.Khac, K212_DoiTuyenQG: event.target.value } })}></textarea>
                 </fieldset>

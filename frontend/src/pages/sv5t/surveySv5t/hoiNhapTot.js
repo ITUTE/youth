@@ -50,7 +50,7 @@ export default function HoiNhapTotSV5T() {
                     <span>Chấp nhận minh chứng Anh văn Đầu ra trong trường, các chứng nhận, chứng chỉ ngoại ngữ do Trung tâm ngoại ngữ của trường tổ chức, giấy chứng nhận thi thử được cấp bởi các Trung tâm ngoại ngữ.</span>
                     <textarea className="form-control"
                         id="hnt-101" required={true} spellcheck="true" wrap="soft" rows="3"
-                        placeholder="VD: Đạt TOEIC 625, thi ngày 18/09/2023."
+                        placeholder="VD: Đạt TOEIC 625, thi ngày 18/09/2024."
                         value={hoiNhapTot.NgoaiNgu.ChungChiNgoaiNgu}
                         onChange={(event) => setHoiNhapTot({ ...hoiNhapTot, NgoaiNgu: { ...hoiNhapTot.NgoaiNgu, ChungChiNgoaiNgu: event.target.value } })}></textarea>
                 </fieldset>
@@ -159,7 +159,7 @@ export default function HoiNhapTotSV5T() {
                 </fieldset>
 
                 <fieldset style={{ margin: "10px" }}>
-                    <legend className="fw-bold">2.8. Được Đoàn Thanh niên - Hội Sinh viên từ cấp khoa trở lên khen thưởng về thành tích xuất sắc trong công tác Đoàn và phong trào thanh niên hoặc công tác Hội và phong trào sinh viên trong năm học 2022 - 2023:</legend>
+                    <legend className="fw-bold">2.8. Được Đoàn Thanh niên - Hội Sinh viên từ cấp khoa trở lên khen thưởng về thành tích xuất sắc trong công tác Đoàn và phong trào thanh niên hoặc công tác Hội và phong trào sinh viên trong năm học 2024 - 2025:</legend>
                     <span><em>Ghi rõ hình thức, nội dung và cấp khen thưởng.</em></span>
                     <textarea className="form-control" 
                         id="hnt-209" required={true} wrap="soft" spellcheck="true" 

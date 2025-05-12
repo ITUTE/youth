@@ -1,12 +1,12 @@
 export const SLIDERS_SV5T = [
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648228476/2021-2022/ICPC%202021/Anh_ICPC-2021_zbpafy.jpg',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086981/%E1%BA%A2nh_ch%E1%BB%A5p_m%C3%A0n_h%C3%ACnh_2025-05-13_045546_kevgry.png',
         title: 'ICPC 2021',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1648147033/2020-2021/L%E1%BB%85%20tuy%C3%AAn%20d%C6%B0%C6%A1ng%20SV5T/Tuyen_duong_SV5T_oepslz.jpg',
+        imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086982/%E1%BA%A2nh_ch%E1%BB%A5p_m%C3%A0n_h%C3%ACnh_2025-05-13_045557_qgcwdt.png',
         title: 'SV5T',
         content:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -207,6 +207,68 @@ export const awards_SV5T_2021_2022 = [
             imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1682448229/PTPN_2122_wmocqn.png',
             title: 'Phạm Thị Phương Nghi',
             sid: '21110556'
+        },
+    ],
+]
+export const awards_SV5T_2023_2024 = [
+    [ 
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086816/482005623_122213617430179744_1309102891517307495_n_cobarh.jpg',
+            title: 'Trần Công Toản',
+            sid: '22110248'
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086821/482343191_122213617490179744_3842322740717147398_n_nwfirz.jpg',
+            title: 'Văn Thị Mười Ngọc',
+            sid: '21110561'
+        },
+    ],
+    [
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086823/482007497_122213617538179744_7021758343153629277_n_y7swqk.jpg',
+            title: 'Trương Nguyễn Thùy Trang',
+            sid: '21110691'
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086851/482028027_122213620904179744_7991606750017887971_n_vh6tjq.jpg',
+            title: 'Huỳnh Ngọc Tài',
+            sid: '23110305'
+        },
+    ],
+    [
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086888/481453193_122213621858179744_6346172212787038725_n_ifuzfi.jpg',
+            title: 'Nguyễn Trần Quốc Thi',
+            sid: '23110331'
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086963/482116192_122213622002179744_3657682191066745768_n_jjelkb.jpg',
+            title: 'Phạm Thị Tuyết Minh',
+            sid: '23110268'
+        },
+    ],
+    [
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086917/481908321_122213621786179744_5895587278142018387_n_xbwg88.jpg',
+            title: 'Nguyễn Thị Phương Anh',
+            sid: '21133004'
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086865/481660920_122213621192179744_7203100801189833554_n_rrxeba.jpg',
+            title: 'Ngô Trung Hiếu',
+            sid: '22110323'
+        },
+    ],
+    [
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086837/481673870_122213620754179744_5400811273842580358_n_zt17vb.jpg',
+            title: 'Đặng Minh Nhật',
+            sid: '22110389'
+        },
+        {
+            imgUrl: 'https://res.cloudinary.com/dp5xqgbsj/image/upload/v1747086842/482025393_122213620850179744_1469658882110230086_n_ib2bue.jpg',
+            title: 'Đặng Cửu Dương',
+            sid: '22110124'
         },
     ],
 ]
