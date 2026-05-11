@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Toast from 'react-bootstrap/Toast'
@@ -39,7 +39,6 @@ export default function SurveySV5T() {
     const [showToast, setShowToast] = useState(false)
     const [toastMessage, setToastMessage] = useState('')
     const [toastVariant, setToastVariant] = useState('success')
-    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const showNotif = (msg, variant = 'success') => {
         setToastMessage(msg)
@@ -56,12 +55,6 @@ export default function SurveySV5T() {
         setShowModal(true)
     }
 
-    const handleShowSubmit = () => {
-        setModalMessage('Bạn có chắc chắn muốn nộp thông tin đăng ký? Sau khi nộp, bạn sẽ không thể thay đổi thông tin. Mọi thắc mắc xin liên hệ fanpage Đoàn - Hội Khoa CNTT.')
-        setModalAction(MODAL_ACTION.SUBMIT)
-        setShowModal(true)
-    }
-
     const resetData = () => {
         ;[ProfileDataKey, DaoDucTotDataKey, HocTapTotDataKey, TheLucTotDataKey, TinhNguyenTotDataKey, HoiNhapTotDataKey]
             .forEach((k) => localStorage.removeItem(k))
@@ -71,7 +64,6 @@ export default function SurveySV5T() {
     }
 
     const submitData = async () => {
-        setIsSubmitting(true)
         const profile = JSON.parse(localStorage.getItem(ProfileDataKey))
         const payload = {
             profile,
@@ -98,8 +90,6 @@ export default function SurveySV5T() {
             }
         } catch (err) {
             showNotif('Không thể kết nối đến máy chủ. Vui lòng kiểm tra mạng và thử lại.', 'danger')
-        } finally {
-            setIsSubmitting(false)
         }
     }
 
