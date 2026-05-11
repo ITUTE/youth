@@ -1,6 +1,5 @@
 import React from 'react'
 import SideBar from '../sidebar'
-//import Body from './body'
 import styles from '../index.module.scss'
 import OfficeBreadcrumb from '../officeBreadcrumb'
 import OfficeDocumentData from './OfficeDocumentData'
@@ -11,7 +10,10 @@ function OfficeDocument() {
         <div className={styles.container}>
             <SideBar />
             <div className="office-workspace">
-                <OfficeBreadcrumb currentField={"Văn bản"} />
+                <OfficeBreadcrumb
+                    currentField="Văn bản"
+                    description="Danh sách văn bản, kế hoạch đã được ký duyệt của Đoàn - Hội Khoa CNTT"
+                />
                 <div className="office-content">
                     <OfficeDocumentData />
                 </div>

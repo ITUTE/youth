@@ -1,21 +1,92 @@
 .header > nav {
-    background-color: #58aef6;
+    background: linear-gradient(135deg, #1e7fd4 0%, #204b9e 100%);
+    box-shadow: 0 2px 16px rgba(32, 75, 158, 0.35);
+    padding: 0.5rem 1.5rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none !important;
+    color: #fff !important;
+
+    &__logo {
+        height: 2.5rem;
+        width: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
+    }
+
+    &__name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff !important;
+        letter-spacing: 0.04em;
+        line-height: 1;
+    }
 }
 
 .navItem {
     & + & {
-        margin-left: 1rem;
+        margin-left: 0;
     }
-    & > * {
-        color: #ecf6fd;
+
+    & > a {
+        color: rgba(236, 246, 253, 0.9) !important;
+        padding: 0.3rem 0.5rem;
+        border-radius: 6px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1px;
+            transition: width 0.25s ease;
+        }
+
+        &:hover {
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.15);
+
+            &::after {
+                width: 70%;
+            }
+        }
     }
 }
+
 .inputsearch {
-    background-color: #fff;
-    border-radius: 0.625rem;
-    border: none;
-    padding: 0.4rem 1rem;
-    font-size: small;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+    color: #fff;
+    width: 9rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.25s ease;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.6);
+        width: 12rem;
+    }
 }
 
 a {

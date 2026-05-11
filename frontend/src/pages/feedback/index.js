@@ -2,15 +2,21 @@ import React from 'react'
 import styles from './index.module.scss'
 
 export default function Feedback() {
-
-    return  (
-        <div styles={styles.padlet}>
-            <div styles={{margin: 0, padding: 0, top: '100px'}}>
-                <iframe title='feedback' className='w-100' style={{height: '100vh'}} src="https://padlet.com/embed/dljssv8mauksx2bq" frameBorder="0" allow="camera;microphone;geolocation">
-                </iframe>
+    return (
+        <div className={styles.page}>
+            <div className={styles.header} data-aos="fade-down">
+                <h1 className={styles.title}>Đánh giá & Góp ý</h1>
+                <p className={styles.sub}>Chia sẻ ý kiến của bạn để chúng tôi cải thiện hoạt động Đoàn - Hội</p>
             </div>
-           
+            <div className={styles.iframeWrap} data-aos="fade-up">
+                <iframe
+                    title="feedback"
+                    src="https://padlet.com/embed/dljssv8mauksx2bq"
+                    frameBorder="0"
+                    allow="camera;microphone;geolocation"
+                    className={styles.iframe}
+                />
+            </div>
         </div>
     )
-    
 }

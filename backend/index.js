@@ -10,10 +10,11 @@ import helmet from 'helmet'
 // Import routers
 import authRouter from './src/routes/authRoutes.js'
 
+dotenv.config()
+
 const app = express()
 const PORT = process.env.PORT || 5001
 const api = '/app/api/v1'
-dotenv.config()
 
 const whitelist = [
     'https://youth-itute.vercel.app',

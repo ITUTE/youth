@@ -1,7 +1,7 @@
 {
   "name": "youth",
   "version": "1.0.0",
-  "description": "> Văn phòng điện tử Đoàn - Hội khoa Công nghệ Thông tin, trường Đại học Sư phạm Kỹ thuật TPHCM.",
+  "description": "> Văn phòng điện tử Đoàn - Hội khoa Công nghệ Thông tin, trường Đại học Công nghệ Kỹ thuật TPHCM.",
   "main": "index.js",
   "directories": {
     "doc": "doc"

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import clsx from 'clsx'
 import { Link } from 'react-router-dom'
 import {
     MDBContainer,
@@ -10,18 +9,14 @@ import {
     MDBNavbarNav,
     MDBNavbarItem,
     MDBCollapse,
-    MDBCarousel,
-    MDBCarouselInner,
-    MDBCarouselItem,
-    MDBCarouselElement,
-    MDBCarouselCaption,
 } from 'mdb-react-ui-kit'
+import logo from 'assets/YIT logo.png'
 
 import styles from './index.module.scss'
 
 export default function App() {
     const [showBasic, setShowBasic] = useState(false)
-    const [navigator, setNavigator] = useState([
+    const [navigator] = useState([
         {
             text: 'Trang chủ',
             to: '/',
@@ -68,8 +63,9 @@ export default function App() {
         <header className={styles.header}>
             <MDBNavbar sticky expand="lg" className="d-flex ">
                 <MDBContainer fluid>
-                    <MDBNavbarBrand className="font-weight-bold" href="/">
-                        YOUTH ITUTE
+                    <MDBNavbarBrand href="/" className={styles.brand}>
+                        <img src={logo} alt="YIT Logo" className={styles.brand__logo} />
+                        <div className={styles.brand__name}>YOUTH ITUTE</div>
                     </MDBNavbarBrand>
 
                     <MDBNavbarToggler

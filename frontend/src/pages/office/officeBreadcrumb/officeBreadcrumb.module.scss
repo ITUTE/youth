@@ -1,0 +1,58 @@
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2ecf8;
+    padding: 1.4rem 1.5rem 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(26, 78, 180, 0.05);
+}
+
+.headerContent {
+    max-width: 100%;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.crumb {
+    font-size: 0.75rem;
+    color: #6b82a8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s;
+
+    &:hover {
+        color: #1a56db;
+        text-decoration: none;
+    }
+}
+
+.sep {
+    font-size: 0.72rem;
+    color: #c0cfe8;
+}
+
+.crumbActive {
+    font-size: 0.75rem;
+    color: #1a56db;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a2e58;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.desc {
+    font-size: 0.82rem;
+    color: #6b82a8;
+    margin: 0.3rem 0 0;
+}

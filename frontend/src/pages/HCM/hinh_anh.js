@@ -2,7 +2,7 @@ export const SECTION_TITLE = 'MỘT VÀI HÌNH ẢNH VỀ CHỦ TỊCH HỒ CHÍ
 
 export const SLIDERS = [
     {
-        imgUrl: 'https://res.cloudinary.com/yitute/image/upload/v1685258433/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.webp',
+        imgUrl: '://res.cloudinary.com/yitute/image/upload/v1685258433/2022-2023/thu-gui-thanh-nien/TH%C6%AF_B%C3%81C_G%E1%BB%ACI_THANH_NI%C3%8AN_uq0exu.webp',
         title: '',
         content: ''
     },

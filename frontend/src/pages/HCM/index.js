@@ -1,366 +1,266 @@
-import clsx from 'clsx'
-import SessionHeader from 'components/sessionHeader'
+import React, { useState, useEffect, useRef } from 'react'
 import {
-    MDBContainer,
-    MDBCard,
-    MDBCardTitle,
-    MDBCardText,
-    MDBCardBody,
-    MDBCardImage,
-    MDBRow,
-    MDBCol,
     MDBCarousel,
     MDBCarouselInner,
     MDBCarouselItem,
     MDBCarouselElement,
     MDBCarouselCaption,
-    MDBBtn,
 } from 'mdb-react-ui-kit'
-import React, { useEffect, useState } from 'react'
 import styles from './index.module.scss'
-import log from 'eslint-plugin-react/lib/util/log'
 import * as TIEUSU from './tieu_su'
 import * as DISAN from './di_san'
 import * as THU_GUI_TN from './thu_gui_thanh_nien'
 import * as HINH_ANH from './hinh_anh'
 import * as SDLLV from './sua_doi_loi_lam_viec'
 
-export default function HCM() {
+const SECTIONS = [
+    { id: 'tieu-su',                label: 'Tiểu sử',              data: TIEUSU    },
+    { id: 'di-san',                 label: 'Di sản',               data: DISAN     },
+    { id: 'sua-doi-loi-lam-viec',   label: 'Sửa đổi lối làm việc', data: SDLLV    },
+    { id: 'thu-gui-thanh-nien',     label: 'Thư gửi thanh niên',   data: THU_GUI_TN },
+    { id: 'hinh-anh',               label: 'Hình ảnh',             data: HINH_ANH  },
+]
+
+/* ── Lightbox ── */
+function Lightbox({ items, startIndex, onClose }) {
+    const [cur, setCur] = useState(startIndex)
+
+    useEffect(() => {
+        const onKey = (e) => {
+            if (e.key === 'Escape') onClose()
+            if (e.key === 'ArrowRight') setCur((c) => Math.min(c + 1, items.length - 1))
+            if (e.key === 'ArrowLeft')  setCur((c) => Math.max(c - 1, 0))
+        }
+        window.addEventListener('keydown', onKey)
+        document.body.style.overflow = 'hidden'
+        return () => {
+            window.removeEventListener('keydown', onKey)
+            document.body.style.overflow = ''
+        }
+    }, [items, onClose])
 
     return (
-        <>
-            {/* TIỂU SỬ */}
-            <MDBContainer
-                fluid
-                className={clsx('d-flex flex-column', styles.container)}
-            >
-                <div className={clsx(styles.banner)}>
-                    <div className={styles.left}>
-                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
-                        <h2>
-                            TIỂU SỬ, CUỘC ĐỜI VÀ SỰ NGHIỆP <br />
-                            ANH HÙNG GIẢI PHÓNG DÂN TỘC, DANH NHÂN VĂN HÓA THẾ GIỚI
-                        </h2>
-                    </div>
-                    
-                    <div className={clsx(styles.right)}>
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselInner className="rounded-2 ">
-                                {TIEUSU.SLIDERS.map((item, index) => (
-                                    <MDBCarouselItem
-                                        className={clsx(styles.bannerItem, {
-                                            active: index === 0,
-                                        })}
-                                        key={index}
-                                    >
-                                        <MDBCarouselElement
-                                            src={item.imgUrl}
-                                            alt={item.title}
-                                        />
-                                        <MDBCarouselCaption>
-                                            <h5>{item.title}</h5>
-                                        </MDBCarouselCaption>
-                                    </MDBCarouselItem>
-                                ))}
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </div>
-                    <div className={styles.bottom} id="tieu-su">
-                        <div className={styles['bottom-left']}></div>
-                        <a href='#tieu-su' className={styles['bottom-right']}>{TIEUSU.SECTION_TITLE}</a>
-                    </div>
-                </div>
+        <div className={styles.lbBackdrop} onClick={onClose}>
+            <div className={styles.lbBox} onClick={(e) => e.stopPropagation()}>
+                <button className={styles.lbClose} onClick={onClose} aria-label="Đóng">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
 
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
+                <button
+                    className={`${styles.lbNav} ${styles.lbPrev}`}
+                    onClick={() => setCur((c) => Math.max(c - 1, 0))}
+                    disabled={cur === 0}
+                    aria-label="Trước"
                 >
-                    <MDBCarousel className={styles.currEvent__body} 
-                    >
-                        <div className={styles.imageShowcase}>
-                            {TIEUSU.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
-                            ))}
-                        </div>
-                    </MDBCarousel>
-                </div>
-            </MDBContainer>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
 
-            {/* DI SẢN */}
-            <MDBContainer
-                fluid
-                className={clsx('d-flex flex-column', styles.container)}
-            >
-                <div className={clsx(styles.banner)}>
-                    <div className={styles.left}>
-                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
-                        <h2>
-                            BỘ SÁCH "DI SẢN HỒ CHÍ MINH"
-                        </h2>
-                    </div>
-                    
-                    <div className={clsx(styles.right)}>
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselInner className="rounded-2 ">
-                                {DISAN.SLIDERS.map((item, index) => (
-                                    <MDBCarouselItem
-                                        className={clsx(styles.bannerItem, {
-                                            active: index === 0,
-                                        })}
-                                        key={index}
-                                    >
-                                        <MDBCarouselElement
-                                            src={item.imgUrl}
-                                            alt={item.title}
-                                        />
-                                        <MDBCarouselCaption>
-                                            <h5>{item.title}</h5>
-                                        </MDBCarouselCaption>
-                                    </MDBCarouselItem>
-                                ))}
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </div>
-                    <div className={styles.bottom} id="di-san">
-                        <div className={styles['bottom-left']}></div>
-                        <a href='#di-san' className={styles['bottom-right']}>{DISAN.SECTION_TITLE}</a>
-                    </div>
+                <div className={styles.lbImg}>
+                    <img src={items[cur].imgUrl} alt={items[cur].title || ''} />
                 </div>
 
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
+                <button
+                    className={`${styles.lbNav} ${styles.lbNext}`}
+                    onClick={() => setCur((c) => Math.min(c + 1, items.length - 1))}
+                    disabled={cur === items.length - 1}
+                    aria-label="Sau"
                 >
-                    <MDBCarousel className={styles.currEvent__body}
-                    >
-                        <div className={styles.imageShowcase}>
-                            {DISAN.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
-                            ))}
-                        </div>
-                    </MDBCarousel>
-                </div>
-            </MDBContainer>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
 
-            {/* SỬA ĐỔI LỐI LÀM VIỆC */}
-            <MDBContainer
-                fluid
-                className={clsx('d-flex flex-column', styles.container)}
-            >
-                <div className={clsx(styles.banner)}>
-                    <div className={styles.left}>
-                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
-                        <h2>
-                            TÁC PHẨM "SỬA ĐỔI LỐI LÀM VIỆC"
-                        </h2>
+                {items[cur].title && (
+                    <div className={styles.lbCaption}>
+                        <span className={styles.lbCounter}>{cur + 1} / {items.length}</span>
+                        <p>{items[cur].title}</p>
                     </div>
-                    
-                    <div className={clsx(styles.right)}>
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselInner className="rounded-2 ">
-                                {SDLLV.SLIDERS.map((item, index) => (
-                                    <MDBCarouselItem
-                                        className={clsx(styles.bannerItem, {
-                                            active: index === 0,
-                                        })}
-                                        key={index}
-                                    >
-                                        <MDBCarouselElement
-                                            src={item.imgUrl}
-                                            alt={item.title}
-                                        />
-                                        <MDBCarouselCaption>
-                                            <h5>{item.title}</h5>
-                                        </MDBCarouselCaption>
-                                    </MDBCarouselItem>
-                                ))}
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </div>
-                    <div className={styles.bottom} id="sua-doi-loi-lam-viec">
-                        <div className={styles['bottom-left']}></div>
-                        <a href='#sua-doi-loi-lam-viec' className={styles['bottom-right']}>{SDLLV.SECTION_TITLE}</a>
-                    </div>
-                </div>
-
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
-                >
-                    <MDBCarousel className={styles.currEvent__body}
-                    >
-                        <div className={styles.imageShowcase}>
-                            {SDLLV.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
-                            ))}
-                        </div>
-                    </MDBCarousel>
-                </div>
-            </MDBContainer>
-
-            {/* THƯ BÁC GỬI THANH NIÊN */}
-            <MDBContainer
-                fluid
-                className={clsx('d-flex flex-column', styles.container)}
-            >
-                <div className={clsx(styles.banner)}>
-                    <div className={styles.left}>
-                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
-                        <h2>
-                            THƯ BÁC GỬI THANH NIÊN
-                        </h2>
-                    </div>
-                    
-                    <div className={clsx(styles.right)}>
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselInner className="rounded-2 ">
-                                {THU_GUI_TN.SLIDERS.map((item, index) => (
-                                    <MDBCarouselItem
-                                        className={clsx(styles.bannerItem, {
-                                            active: index === 0,
-                                        })}
-                                        styles={{height: '20vh !important'}}
-                                        key={index}
-                                    >
-                                        <MDBCarouselElement
-                                            src={item.imgUrl}
-                                            alt={item.title}
-                                        />
-                                        <MDBCarouselCaption>
-                                            <h5>{item.title}</h5>
-                                        </MDBCarouselCaption>
-                                    </MDBCarouselItem>
-                                ))}
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </div>
-                    <div className={styles.bottom} id="thu-gui-thanh-nien">
-                        <div className={styles['bottom-left']}></div>
-                        <a href='#thu-gui-thanh-nien' className={styles['bottom-right']}>{THU_GUI_TN.SECTION_TITLE}</a>
-                    </div>
-                </div>
-
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
-                >
-                    <MDBCarousel className={styles.currEvent__body}
-                    >
-                        <div className={styles.imageShowcase}>
-                            {THU_GUI_TN.ITEMS.map((item, index) => (
-                                <img src={item.imgUrl} alt={index} key={'tieusu-'+index} loading="lazy"/>
-                            ))}
-                        </div>
-                    </MDBCarousel>
-                </div>
-            </MDBContainer>
-
-            {/* HÌNH ẢNH */}
-            <MDBContainer
-                fluid
-                className={clsx('d-flex flex-column', styles.container)}
-            >
-                <div className={clsx(styles.banner)}>
-                    <div className={styles.left}>
-                        <h1>KHÔNG GIAN VĂN HÓA HỒ CHÍ MINH</h1>
-                        <h2>
-                            MỘT VÀI HÌNH ẢNH VỀ CHỦ TỊCH HỒ CHÍ MINH
-                        </h2>
-                    </div>
-                    
-                    <div className={clsx(styles.right)}>
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselInner className="rounded-2 ">
-                                {HINH_ANH.SLIDERS.map((item, index) => (
-                                    <MDBCarouselItem
-                                        className={clsx(styles.bannerItem, {
-                                            active: index === 0,
-                                        })}
-                                        key={index}
-                                    >
-                                        <MDBCarouselElement
-                                            src={item.imgUrl}
-                                            alt={item.title}
-                                        />
-                                        <MDBCarouselCaption>
-                                            <h5>{item.title}</h5>
-                                        </MDBCarouselCaption>
-                                    </MDBCarouselItem>
-                                ))}
-                            </MDBCarouselInner>
-                        </MDBCarousel>
-                    </div>
-                    <div className={styles.bottom} id="hinh-anh">
-                        <div className={styles['bottom-left']}></div>
-                        <a href='#hinh-anh' className={styles['bottom-right']}>{HINH_ANH.SECTION_TITLE}</a>
-                    </div>
-                </div>
-
-                <div
-                    className={clsx(
-                        'd-flex flex-column',
-                        styles.bluebg,
-                        styles.currEvent,
-                    )}
-                >
-                    <MDBCarousel className={styles.currEvent__body}
-                    >
-                        {HINH_ANH.ITEMS.map((item, index) => (
-                            <MDBCard key={index} className={styles.news__card}>   
-                                <MDBCardImage
-                                    src={item.imgUrl}
-                                    alt="..."
-                                    className={styles['news__card-image']}
-                                />
-                                <MDBCardTitle className={styles['title_info']}>{item.title}</MDBCardTitle>
-                            </MDBCard>
-                            ))
-                        }
-                    </MDBCarousel>
-                </div>
-            </MDBContainer>
-        </>
+                )}
+            </div>
+        </div>
     )
 }
 
+/* ── InView hook ── */
+function useInView(threshold = 0.1) {
+    const ref = useRef(null)
+    const [inView, setInView] = useState(false)
+    useEffect(() => {
+        const obs = new IntersectionObserver(
+            ([e]) => { if (e.isIntersecting) setInView(true) },
+            { threshold }
+        )
+        if (ref.current) obs.observe(ref.current)
+        return () => obs.disconnect()
+    }, [threshold])
+    return [ref, inView]
+}
 
-export const GG_SHEET_URL = "https://docs.google.com/spreadsheets/d/15OgjKPQIg8_hSGISfdgvtSyome2zxQkVpbGPcm5IGpI/gviz/tq?tqx=out:json"
+/* ── Section ── */
+function AnimatedSection({ id, data, index }) {
+    const [headerRef, headerIn] = useInView()
+    const [carouselRef, carouselIn] = useInView()
+    const [gridRef, gridIn] = useInView(0.05)
+    const [lightbox, setLightbox] = useState(null)
 
-export function combineArrays(first, second) {
-    return first.reduce((acc, val, ind) => {
-      acc[val] = second[ind];
-      return acc;
-    }, {});
-  };
+    const isPhotoEssay = id === 'hinh-anh'
 
-export function getGoogleSheetData(url) {
-    return fetch(url)
-      .then(r => r.text())
-      .then(data => {
-        const r = data.match(/google\.visualization\.Query\.setResponse\(([\s\S\w]+)\)/);
-        if (r && r.length === 2) {
-          const obj = JSON.parse(r[1]);
-          const table = obj.table;
-          const header = table.cols.map(({ label } ) => label);
-          const rows = table.rows.map(({ c } ) => c.map((e) => e ? (e.v || "") : "")); // Modified from const rows = table.rows.map(({c}) => c.map(({v}) => v));
-          var result = rows.map((row ) => {
-            var student = combineArrays(header, row);
-            return student;
-          });
+    return (
+        <section className={styles.section} id={id}>
+            {/* Section header */}
+            <div ref={headerRef} className={`${styles.sectionHeader} ${headerIn ? styles.visible : ''}`}>
+                <span className={styles.sectionNum}>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                    <p className={styles.sectionTag}>Không gian văn hóa Hồ Chí Minh</p>
+                    <h2 className={styles.sectionTitle}>{data.SECTION_TITLE}</h2>
+                </div>
+            </div>
 
-          return result;
+            {/* Carousel */}
+            {data.SLIDERS?.length > 0 && (
+                <div ref={carouselRef} className={`${styles.carouselWrap} ${carouselIn ? styles.visible : ''}`}>
+                    <MDBCarousel showIndicators showControls fade>
+                        <MDBCarouselInner className="rounded-3">
+                            {data.SLIDERS.map((item, i) => (
+                                <MDBCarouselItem className={i === 0 ? 'active' : ''} key={i}>
+                                    <MDBCarouselElement src={item.imgUrl} alt={item.title || ''} />
+                                    {item.title && <MDBCarouselCaption><h5>{item.title}</h5></MDBCarouselCaption>}
+                                </MDBCarouselItem>
+                            ))}
+                        </MDBCarouselInner>
+                    </MDBCarousel>
+                </div>
+            )}
+
+            {/* Photo essay layout for Hình ảnh */}
+            {isPhotoEssay ? (
+                <div ref={gridRef} className={styles.essay}>
+                    {data.ITEMS.map((item, i) => (
+                        <div
+                            key={i}
+                            className={`${styles.essayRow} ${i % 2 !== 0 ? styles.essayReverse : ''} ${gridIn ? styles.essayVisible : ''}`}
+                            style={{ transitionDelay: `${Math.min(i * 80, 640)}ms` }}
+                        >
+                            <div className={styles.essayImg} onClick={() => setLightbox(i)}>
+                                <img src={item.imgUrl} alt="" loading="lazy" />
+                                <div className={styles.essayImgOverlay}>
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                        <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div className={styles.essayText}>
+                                <span className={styles.essayIdx}>{String(i + 1).padStart(2, '0')}</span>
+                                <p className={styles.essayCaption}>{item.title}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                /* Regular image grid */
+                <div ref={gridRef} className={styles.imageGrid}>
+                    {data.ITEMS.map((item, i) => (
+                        <div
+                            key={i}
+                            className={`${styles.imageCard} ${gridIn ? styles.imageVisible : ''}`}
+                            style={{ transitionDelay: `${Math.min(i * 60, 600)}ms` }}
+                            onClick={() => setLightbox(i)}
+                        >
+                            <div className={styles.imageInner}>
+                                <img src={item.imgUrl} alt={item.title || ''} loading="lazy" />
+                                <div className={styles.imageOverlay}>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                        <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            {item.title && <p className={styles.imageCaption}>{item.title}</p>}
+                        </div>
+                    ))}
+                </div>
+            )}
+
+            {lightbox !== null && (
+                <Lightbox
+                    items={data.ITEMS}
+                    startIndex={lightbox}
+                    onClose={() => setLightbox(null)}
+                />
+            )}
+        </section>
+    )
+}
+
+/* ── Page ── */
+export default function HCM() {
+    const [activeTab, setActiveTab] = useState(SECTIONS[0].id)
+
+    useEffect(() => {
+        const onScroll = () => {
+            for (const s of SECTIONS) {
+                const el = document.getElementById(s.id)
+                if (!el) continue
+                const rect = el.getBoundingClientRect()
+                if (rect.top <= 120 && rect.bottom > 120) { setActiveTab(s.id); break }
+            }
         }
-      })
-  }
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
+
+    const scrollTo = (id) => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+
+    return (
+        <div className={styles.page}>
+            <div className={styles.hero}>
+                <div className={styles.heroOverlay} />
+                <div className={styles.heroContent}>
+                    <span className={styles.heroTag}>Đoàn - Hội Khoa Công nghệ Thông tin</span>
+                    <h1 className={styles.heroTitle}>Không gian văn hóa<br />Hồ Chí Minh</h1>
+                    <p className={styles.heroSub}>
+                        Tìm hiểu về tiểu sử, cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh —
+                        Anh hùng giải phóng dân tộc, Danh nhân văn hóa thế giới
+                    </p>
+                    <div className={styles.heroNav}>
+                        {SECTIONS.map((s) => (
+                            <button key={s.id} className={styles.heroNavBtn} onClick={() => scrollTo(s.id)}>
+                                {s.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.heroWave}>
+                    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8f9fa"/>
+                    </svg>
+                </div>
+            </div>
+
+            <nav className={styles.tabs}>
+                {SECTIONS.map((s) => (
+                    <button
+                        key={s.id}
+                        className={`${styles.tab} ${activeTab === s.id ? styles.tabActive : ''}`}
+                        onClick={() => scrollTo(s.id)}
+                    >
+                        {s.label}
+                    </button>
+                ))}
+            </nav>
+
+            <div className={styles.content}>
+                {SECTIONS.map((s, i) => (
+                    <AnimatedSection key={s.id} id={s.id} data={s.data} index={i} />
+                ))}
+            </div>
+        </div>
+    )
+}
