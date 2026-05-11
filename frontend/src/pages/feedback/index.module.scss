@@ -24,6 +24,12 @@
     margin: 0;
 }
 
+@media (max-width: 600px) {
+    .header { padding: 2rem 1.25rem 1.5rem; }
+    .title { font-size: 1.6rem; }
+    .iframeWrap { margin: 1rem; }
+}
+
 .iframeWrap {
     flex: 1;
     background: #ffffff;

@@ -84,6 +84,10 @@
     }
 }
 
+@media (max-width: 480px) {
+    .heroTitle { font-size: 2.5rem; }
+}
+
 /* ── Tabs ── */
 .tabs {
     position: sticky;
@@ -223,6 +227,24 @@
         color: #4b5563;
         line-height: 1.8;
         margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .newsCard {
+        grid-template-columns: 1fr;
+    }
+
+    .newsCard__img {
+        min-height: 200px;
+    }
+
+    .newsCard__body {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .content {
+        padding: 2rem 1rem 3rem;
     }
 }
 

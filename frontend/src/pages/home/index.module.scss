@@ -714,6 +714,76 @@
     }
 }
 
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+
+        &__content {
+            flex-direction: column;
+            gap: 1.75rem;
+            padding: 2rem 1.25rem;
+        }
+
+        &__title { font-size: 2.1rem; }
+
+        &__sub { font-size: 0.9rem; }
+
+        &__right { width: 100%; }
+
+        &__carousel img { height: 13rem; }
+    }
+
+    .statsBar { padding: 1.75rem 0.5rem; }
+
+    .statItem {
+        padding: 0 1.25rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        padding-bottom: 1.25rem;
+        margin-bottom: 0.25rem;
+
+        &:last-child { border-bottom: none; }
+
+        strong { font-size: 1.75rem; }
+    }
+
+    .countdown {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .countdown__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .countdown__name { font-size: 1.1rem; }
+
+    .cdBox {
+        min-width: 3.5rem;
+        padding: 0.5rem 0.75rem;
+
+        &__value { font-size: 1.5rem; }
+    }
+
+    .section { padding: 2.5rem 1.25rem; }
+
+    .sectionHead__title h2 { font-size: 1.2rem; }
+
+    .eventCard img { height: 14rem; }
+
+    .quickLinks {
+        padding: 1rem;
+        gap: 0.6rem;
+    }
+
+    .quickLink {
+        padding: 0.6rem 1rem;
+        font-size: 0.82rem;
+    }
+}
+
 /* ─── NEWS CARD READMORE BUTTON ─── */
 .newsCard__readmore {
     background: none;

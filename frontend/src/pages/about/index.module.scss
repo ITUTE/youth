@@ -1,9 +1,8 @@
 .container {
     padding: 0 6.25rem;
     padding-left: 8rem !important;
-    // padding-right: 8rem !important;
     position: relative;
-	padding-top: 30rem;;
+	padding-top: 30rem;
     &::after {
         content: '';
         position: absolute;
@@ -11,6 +10,17 @@
         top: 1rem;
         height: 100%;
         border-left: 0.3rem dashed #97d5fe;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 1rem !important;
+        padding-top: 22rem !important;
+
+        &::after { display: none; }
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 26rem !important;
     }
 }
 
@@ -117,7 +127,6 @@
     background-position: center;
     padding: 2.5rem 6rem;
     padding-bottom: 6rem;
-    // margin-bottom: 7.25rem;
 	width: 100vw;
 	position: absolute;
 	top: 0rem;
@@ -165,7 +174,32 @@
             font-weight: bolder;
             font-size: 2rem;
             color: #58aef6;
-        } 
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 2rem 1.25rem 5rem;
+        align-items: center;
+        text-align: center;
+
+        .left {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .right {
+            width: 100%;
+
+            & > h1 { font-size: 2rem; }
+            & > h2 { font-size: 1rem; }
+        }
+
+        .bottom {
+            width: 95%;
+
+            &-right { font-size: 1.1rem; padding: 1rem; }
+        }
     }
 }
 .currEvent {

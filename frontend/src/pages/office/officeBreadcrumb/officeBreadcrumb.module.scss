@@ -49,6 +49,8 @@
     color: #1a2e58;
     margin: 0;
     letter-spacing: -0.01em;
+
+    @media (max-width: 480px) { font-size: 1.1rem; }
 }
 
 .desc {

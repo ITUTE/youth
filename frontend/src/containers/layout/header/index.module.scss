@@ -89,6 +89,14 @@
     }
 }
 
+@media (max-width: 992px) {
+    .inputsearch {
+        width: 100%;
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
+    }
+}
+
 a {
     text-decoration: none !important;
 }
