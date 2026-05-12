@@ -10,6 +10,7 @@ import HCM from 'pages/HCM'
 import GreenCampus from 'pages/greenCampus'
 import Holidays from 'pages/holidays'
 import Resources from 'pages/resources'
+import StudentActivities from 'pages/studentActivities'
 import Feedback from 'pages/feedback'
 import { lazy, Suspense } from 'react'
 import { Route } from 'react-router-dom'
@@ -67,6 +68,10 @@ const routes = [
     {
         path: '/tai-nguyen',
         element: <Resources />,
+    },
+    {
+        path: '/hoat-dong-sinh-vien',
+        element: <StudentActivities />,
     },
     {
         path: '/support',
