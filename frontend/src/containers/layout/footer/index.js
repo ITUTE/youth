@@ -31,8 +31,8 @@ function Footer() {
 
                 <div className={styles.footer__contact}>
                     <h4>Liên hệ</h4>
-                    <p>01 Võ Văn Ngân, P. Linh Chiểu</p>
-                    <p>Tp. Thủ Đức, TP. Hồ Chí Minh</p>
+                    <p>01 Võ Văn Ngân, P. Thủ Đức</p>
+                    <p> TP. Hồ Chí Minh</p>
                     <p>Trường Đại học Công nghệ Kỹ thuật TP.HCM</p>
                     <div className={styles.footer__social}>
                         <a
