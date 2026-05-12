@@ -26,15 +26,17 @@ function Tag({ label, active, onClick }) {
   );
 }
 
+const CODE_SYMBOLS = ["</>", "{}", "()", "=>", "[]", "&&", "||", "/**", "npm", "git", "API", "AI"];
+
 /* ── Resource card ── */
-function ResourceCard({ resource, color, bookmarked, onBookmark, onCopy, copied }) {
+function ResourceCard({ resource, color, bookmarked, onBookmark, onCopy, copied, index }) {
   return (
     <a
       href={resource.url}
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.card} ${resource.highlight ? styles.cardHighlight : ""}`}
-      style={{ "--card-color": color }}
+      style={{ "--card-color": color, "--i": index }}
     >
       <div className={styles.card__accentBar} />
 
@@ -96,12 +98,13 @@ function saveBookmarks(bm) {
 /* ═══════════════════════════════════════════ */
 export default function Resources() {
   const [activeTab, setActiveTab]     = useState("tai-lieu");
+  const [tabKey, setTabKey]           = useState(0);      // re-trigger grid animation
   const [search, setSearch]           = useState("");
   const [tagFilter, setTagFilter]     = useState(null);
   const [bookmarks, setBookmarks]     = useState(loadBookmarks);
   const [copiedUrl, setCopiedUrl]     = useState(null);
-  const [toast, setToast]             = useState(null);   // { msg, type }
-  const [randomCard, setRandomCard]   = useState(null);   // random resource modal
+  const [toast, setToast]             = useState(null);
+  const [randomCard, setRandomCard]   = useState(null);
 
   /* ── copy link ── */
   const handleCopy = useCallback((url) => {
@@ -226,6 +229,21 @@ export default function Resources() {
       <section className={styles.hero}>
         <div className={styles.heroGrid} />
         <div className={styles.heroGlow} />
+        <div className={styles.heroSymbols} aria-hidden>
+          {CODE_SYMBOLS.map((sym, i) => (
+            <span
+              key={i}
+              className={styles.heroSymbol}
+              style={{
+                left: `${6 + i * 8}%`,
+                top: `${15 + (i % 4) * 20}%`,
+                animationDuration: `${4 + (i % 3)}s`,
+                animationDelay: `${i * 0.4}s`,
+                fontSize: `${0.65 + (i % 3) * 0.2}rem`,
+              }}
+            >{sym}</span>
+          ))}
+        </div>
         <div className={styles.heroContent}>
           <span className={styles.heroTag}>Khoa Công nghệ Thông tin · HCMUTE</span>
           <h1 className={styles.heroTitle}>
@@ -288,7 +306,7 @@ export default function Resources() {
             key={cat.id}
             className={`${styles.tab} ${activeTab === cat.id && !isGlobalSearch ? styles.tabActive : ""}`}
             style={activeTab === cat.id && !isGlobalSearch ? { "--tab-color": cat.color } : {}}
-            onClick={() => { setActiveTab(cat.id); setTagFilter(null); setSearch(""); }}
+            onClick={() => { setActiveTab(cat.id); setTagFilter(null); setSearch(""); setTabKey(k => k + 1); }}
           >
             <span className={styles.tab__icon}>{cat.icon}</span>
             <span className={styles.tab__label}>{cat.label}</span>
@@ -301,7 +319,7 @@ export default function Resources() {
           <button
             className={`${styles.tab} ${styles.tabBookmark} ${activeTab === "__bookmarks__" && !isGlobalSearch ? styles.tabActive : ""}`}
             style={activeTab === "__bookmarks__" && !isGlobalSearch ? { "--tab-color": "#e11d48" } : {}}
-            onClick={() => { setActiveTab("__bookmarks__"); setTagFilter(null); setSearch(""); }}
+            onClick={() => { setActiveTab("__bookmarks__"); setTagFilter(null); setSearch(""); setTabKey(k => k + 1); }}
           >
             <span className={styles.tab__icon}>❤️</span>
             <span className={styles.tab__label}>Yêu thích</span>
@@ -337,7 +355,7 @@ export default function Resources() {
                   <div className={styles.grid}>
                     {hits.map((r, i) => (
                       <ResourceCard
-                        key={i} resource={r} color={cat.color}
+                        key={i} index={i} resource={r} color={cat.color}
                         bookmarked={isBookmarked(r.url)}
                         onBookmark={toggleBookmark}
                         onCopy={handleCopy}
@@ -387,10 +405,10 @@ export default function Resources() {
             )}
 
             {filteredList.length > 0 ? (
-              <div className={styles.grid}>
+              <div className={styles.grid} key={tabKey}>
                 {filteredList.map((r, i) => (
                   <ResourceCard
-                    key={i} resource={r} color={activeCat.color}
+                    key={i} index={i} resource={r} color={activeCat.color}
                     bookmarked={isBookmarked(r.url)}
                     onBookmark={toggleBookmark}
                     onCopy={handleCopy}
