@@ -12,8 +12,10 @@ import * as DISAN from './di_san'
 import * as THU_GUI_TN from './thu_gui_thanh_nien'
 import * as HINH_ANH from './hinh_anh'
 import * as SDLLV from './sua_doi_loi_lam_viec'
+import * as TIMELINE from './timeline'
 
 const SECTIONS = [
+    { id: 'moc-lich-su',            label: 'Mốc lịch sử',          data: TIMELINE,   isTimeline: true },
     { id: 'tieu-su',                label: 'Tiểu sử',              data: TIEUSU    },
     { id: 'di-san',                 label: 'Di sản',               data: DISAN     },
     { id: 'sua-doi-loi-lam-viec',   label: 'Sửa đổi lối làm việc', data: SDLLV    },
@@ -98,6 +100,59 @@ function useInView(threshold = 0.1) {
         return () => obs.disconnect()
     }, [threshold])
     return [ref, inView]
+}
+
+/* ── Timeline Section ── */
+function TimelineSection({ id, data, index }) {
+    const [headerRef, headerIn] = useInView()
+
+    return (
+        <section className={styles.section} id={id}>
+            <div ref={headerRef} className={`${styles.sectionHeader} ${headerIn ? styles.visible : ''}`}>
+                <span className={styles.sectionNum}>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                    <p className={styles.sectionTag}>Không gian văn hóa Hồ Chí Minh</p>
+                    <h2 className={styles.sectionTitle}>{data.SECTION_TITLE}</h2>
+                </div>
+            </div>
+
+            <div className={styles.timeline}>
+                <div className={styles.timelineLine} aria-hidden="true" />
+                {data.EVENTS.map((ev, i) => (
+                    <TimelineItem key={i} event={ev} index={i} />
+                ))}
+            </div>
+        </section>
+    )
+}
+
+function TimelineItem({ event, index }) {
+    const [ref, inView] = useInView(0.2)
+    const isRight = index % 2 !== 0
+
+    return (
+        <div
+            ref={ref}
+            className={`${styles.timelineItem} ${isRight ? styles.timelineItemRight : ''} ${inView ? styles.timelineItemVisible : ''}`}
+            style={{ transitionDelay: '0ms' }}
+        >
+            <div className={styles.timelineCard}>
+                <span className={styles.timelineYear}>{event.year}</span>
+                <h3 className={styles.timelineTitle}>{event.title}</h3>
+                <p className={styles.timelineDesc}>{event.desc}</p>
+                {event.isLast && (
+                    <div className={styles.timelineEndStar} aria-hidden="true">
+                        <svg viewBox="0 0 100 100">
+                            <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" fill="#FFD700" />
+                        </svg>
+                    </div>
+                )}
+            </div>
+            <div className={styles.timelineDot}>
+                <span>{event.year.slice(0, 4)}</span>
+            </div>
+        </div>
+    )
 }
 
 /* ── Section ── */
@@ -285,9 +340,11 @@ export default function HCM() {
             </nav>
 
             <div className={styles.content}>
-                {SECTIONS.map((s, i) => (
-                    <AnimatedSection key={s.id} id={s.id} data={s.data} index={i} />
-                ))}
+                {SECTIONS.map((s, i) =>
+                    s.isTimeline
+                        ? <TimelineSection key={s.id} id={s.id} data={s.data} index={i} />
+                        : <AnimatedSection key={s.id} id={s.id} data={s.data} index={i} />
+                )}
             </div>
         </div>
     )
