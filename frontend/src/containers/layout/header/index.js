@@ -42,6 +42,14 @@ export default function App() {
             to: '/HCM',
         },
         {
+            text: 'Ngày lễ lớn',
+            to: '/ngay-le-lon',
+        },
+        {
+            text: 'Tài nguyên học tập',
+            to: '/tai-nguyen',
+        },
+        {
             text: 'ITER Green Campus',
             to: '/iter-green-campus',
         },
@@ -82,11 +90,6 @@ export default function App() {
                     </MDBNavbarToggler>
 
                     <MDBCollapse navbar show={showBasic}>
-                        <input
-                            type="text"
-                            className={styles.inputsearch}
-                            placeholder="Tìm kiếm..."
-                        />
                         <MDBNavbarNav className="mr-auto mb-2 mb-lg-0 align-items-center justify-content-end">
                             {navigator.map((nav, index) => (
                                 <MDBNavbarItem
