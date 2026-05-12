@@ -7,6 +7,7 @@ import Support from 'pages/support'
 import SV5T from 'pages/sv5t'
 import SurveySV5T from 'pages/sv5t/surveySv5t'
 import HCM from 'pages/HCM'
+import GreenCampus from 'pages/greenCampus'
 import Feedback from 'pages/feedback'
 import { lazy, Suspense } from 'react'
 import { Route } from 'react-router-dom'
@@ -52,6 +53,10 @@ const routes = [
     {
         path: '/HCM',
         element: <HCM />,
+    },
+    {
+        path: '/iter-green-campus',
+        element: <GreenCampus />,
     },
     {
         path: '/support',

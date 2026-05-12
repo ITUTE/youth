@@ -42,6 +42,10 @@ export default function App() {
             to: '/HCM',
         },
         {
+            text: 'ITER Green Campus',
+            to: '/iter-green-campus',
+        },
+        {
             text: 'Vinh danh',
             to: '/award',
         },
