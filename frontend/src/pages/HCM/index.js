@@ -222,14 +222,41 @@ export default function HCM() {
         <div className={styles.page}>
             <div className={styles.hero}>
                 <div className={styles.heroOverlay} />
+
+                {/* Decorative corner patterns */}
+                <div className={styles.heroDecorTL} aria-hidden="true" />
+                <div className={styles.heroDecorBR} aria-hidden="true" />
+
                 <div className={styles.heroContent}>
-                    <span className={styles.heroTag}>Đoàn - Hội Khoa Công nghệ Thông tin</span>
-                    <h1 className={styles.heroTitle}>Không gian văn hóa<br />Hồ Chí Minh</h1>
-                    <p className={styles.heroSub}>
+                    {/* Gold star */}
+                    <div className={styles.heroStarWrap} data-aos="zoom-in">
+                        <svg className={styles.heroStar} viewBox="0 0 100 100" aria-hidden="true">
+                            <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35" />
+                        </svg>
+                    </div>
+
+                    <span className={styles.heroTag} data-aos="fade-down" data-aos-delay="60">
+                        Đoàn - Hội Khoa Công nghệ Thông tin · HCMUTE
+                    </span>
+
+                    <div className={styles.heroTitleBlock} data-aos="fade-up" data-aos-delay="120">
+                        <p className={styles.heroTitleEyebrow}>KHÔNG GIAN VĂN HÓA</p>
+                        <h1 className={styles.heroTitle}>HỒ CHÍ MINH</h1>
+                    </div>
+
+                    <div className={styles.heroQuote} data-aos="fade-up" data-aos-delay="200">
+                        <svg className={styles.heroQuoteIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.016.66-1.066 1.515-1.867 2.558-2.403L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368z"/>
+                        </svg>
+                        <p>Không có gì quý hơn độc lập, tự do</p>
+                    </div>
+
+                    <p className={styles.heroSub} data-aos="fade-up" data-aos-delay="260">
                         Tìm hiểu về tiểu sử, cuộc đời và sự nghiệp của Chủ tịch Hồ Chí Minh —
                         Anh hùng giải phóng dân tộc, Danh nhân văn hóa thế giới
                     </p>
-                    <div className={styles.heroNav}>
+
+                    <div className={styles.heroNav} data-aos="fade-up" data-aos-delay="320">
                         {SECTIONS.map((s) => (
                             <button key={s.id} className={styles.heroNavBtn} onClick={() => scrollTo(s.id)}>
                                 {s.label}
@@ -237,6 +264,7 @@ export default function HCM() {
                         ))}
                     </div>
                 </div>
+
                 <div className={styles.heroWave}>
                     <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
                         <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8f9fa"/>
