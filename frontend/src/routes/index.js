@@ -1,4 +1,5 @@
 import About from 'pages/about'
+import BocTham from 'pages/bocTham'
 import Award from 'pages/award'
 import OfficeDocument from 'pages/office/officeDocument'
 import OfficeTemplate from 'pages/office/officeTemplate'
@@ -88,6 +89,10 @@ const routes = [
     {
         path: '/feedback',
         element: <Feedback />,
+    },
+    {
+        path: '/boc-tham',
+        element: <BocTham />,
     },
     {
         path: '/',

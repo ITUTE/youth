@@ -78,6 +78,7 @@ const NAV = [
         text: 'Thêm',
         children: [
             { text: 'Văn phòng điện tử', to: '/office' },
+            { text: 'Bốc thăm', to: '/boc-tham' },
             { text: 'Đánh giá', to: '/feedback' },
             { text: 'Về chúng tôi', to: '/about' },
         ],
