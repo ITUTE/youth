@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import * as XLSX from 'xlsx'
 import { saveAs } from 'file-saver'
 import styles from './index.module.scss'
+import mitBanner from 'assets/mit-banner.jpg'
 
 const LS_TEAMS  = 'bocTham_teams'
 const LS_TOPICS = 'bocTham_topics'
@@ -210,12 +211,18 @@ export default function BocTham() {
 
     return (
         <div className={styles.page}>
+            <div className={styles.cyanOrb} />
             <div className={styles.container}>
+
+                {/* Banner */}
+                <div className={styles.bannerWrap}>
+                    <img src={mitBanner} alt="Mastering IT 2026" className={styles.banner} />
+                </div>
 
                 {/* Header */}
                 <div className={styles.pageHeader}>
                     <h1 className={styles.title}>🎲 BỐC THĂM</h1>
-                    <p className={styles.subtitle}>Hệ thống bốc thăm sự kiện</p>
+                    <p className={styles.subtitle}>Hùng biện MIT 2026</p>
                 </div>
 
                 {/* Setup */}
@@ -235,7 +242,7 @@ export default function BocTham() {
                     </div>
                     <div className={styles.setupBox}>
                         <div className={styles.setupLabel}>
-                            <span>📋 Danh sách chủ đề</span>
+                            <span>Danh sách chủ đề</span>
                             <span className={styles.countBadge}>{availableTopics.length} / {allTopics.length}</span>
                         </div>
                         <textarea
@@ -289,7 +296,7 @@ export default function BocTham() {
                             onClick={drawTeam}
                             disabled={isSpinning || !availableTeams.length || drawState === 'pairComplete'}
                         >
-                            🎲 BỐC ĐỘI
+                            BỐC ĐỘI
                             <span className={styles.btnBadge}>{availableTeams.length} còn lại</span>
                         </button>
                         <button
@@ -297,12 +304,12 @@ export default function BocTham() {
                             onClick={drawTopic}
                             disabled={drawState !== 'teamDrawn' || !availableTopics.length}
                         >
-                            🎲 BỐC CHỦ ĐỀ
+                            BỐC CHỦ ĐỀ
                             <span className={styles.btnBadge}>{availableTopics.length} còn lại</span>
                         </button>
                         {drawState === 'pairComplete' && (
                             <button className={`${styles.btn} ${styles.btnNext}`} onClick={nextDraw}>
-                                ✅ TIẾP THEO
+                                TIẾP THEO
                             </button>
                         )}
                     </div>
@@ -312,14 +319,14 @@ export default function BocTham() {
                 <div className={styles.historyCard}>
                     <div className={styles.historyHeader}>
                         <h2 className={styles.historyTitle}>
-                            📋 Lịch sử bốc thăm
+                            Lịch sử bốc thăm
                             <span className={styles.historyCnt}>{history.length} cặp</span>
                         </h2>
                         <div className={styles.historyActions}>
                             {history.length > 0 && (
-                                <button className={styles.btnExport} onClick={exportExcel}>📊 Xuất Excel</button>
+                                <button className={styles.btnExport} onClick={exportExcel}>Xuất Excel</button>
                             )}
-                            <button className={styles.btnReset} onClick={reset}>🔄 Reset</button>
+                            <button className={styles.btnReset} onClick={reset}>Reset</button>
                         </div>
                     </div>
 
